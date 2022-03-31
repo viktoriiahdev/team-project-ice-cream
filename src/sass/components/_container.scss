@@ -1,0 +1,16 @@
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media screen and (min-width: $small) {
+        width: $small;
+    }
+
+    @media screen and (min-width: $medium) {
+        width: $medium;
+    }
+
+    @media screen and (min-width: $large) {
+        width: $large;
+    }
+}  

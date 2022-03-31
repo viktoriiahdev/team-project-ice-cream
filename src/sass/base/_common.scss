@@ -1,0 +1,55 @@
+body {
+  background-color: $secondary-accent-color-pink;
+  font-family: $dm-sans;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+
+  margin: 0;
+
+  overflow-x: hidden;
+
+  &.with-overlay {
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: $medium) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $large) {
+    font-size: 16px;
+  }
+}
+
+img {
+  display: block;
+
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.container *,
+.form * {
+  outline: 1px solid red;
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,63 @@
+.button {
+  font-family: $dm-sans;
+  font-weight: 700;
+
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+
+  border-radius: 22px;
+
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+
+  padding: 7px 14px;
+
+  @media screen and (min-width: $large) {
+    font-size: 14px;
+    line-height: 1.285;
+    padding: 12px 25px;
+  }
+
+  &--medium {
+    line-height: 1.285;
+  }
+
+  &--large {
+    font-size: 16px;
+    line-height: 1.3125;
+
+    padding: 12px 35px;
+  }
+
+  &--main {
+    color: $main-accent-color;
+    background-color: $main-bg-color;
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+
+  &--accent {
+    color: $maint-text-color-light;
+    background-color: $main-accent-color;
+
+    &:hover,
+    &:focus {
+      background-color: #c7133e;
+    }
+  }
+}
+
+.button__icon {
+  width: 4px;
+  height: 8px;
+
+  background-color: white;
+  color: inherit;
+
+  margin-left: 12px;
+}

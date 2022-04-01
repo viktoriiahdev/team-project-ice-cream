@@ -1,0 +1,31 @@
+.about {
+  background-color: #fff5f6;
+}
+.section__label {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(18 / 21);
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+  margin-bottom: 15px;
+}
+.about__image {
+  width: 280px;
+  height: 279px;
+}
+.about__text {
+  width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #000000;
+  margin-bottom: 20px;
+  &--gray {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    color: #907e82;
+  }
+}

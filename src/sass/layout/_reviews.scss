@@ -1,0 +1,68 @@
+.reviews{
+    background-color: $main-bg-color;
+}
+.reviews-slider__img{        
+    width: 85px;
+    height: 85px;
+    border-radius: 44px;
+    margin: auto;   
+    margin-bottom: 32px; 
+}   
+.reviews-slider__text-wrap{
+    position: relative; 
+    width: 100%;
+    text-align: center;
+    background-color: #FAFAFA;
+    padding: 30px 50px 17px 50px ;
+    margin-bottom: 16px;
+    z-index: 410;
+}
+.reviews-slider__text{       
+   color:$maint-text-color-dark; 
+   text-indent: 20px;
+   line-height: 2.58; 
+   background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
+   background-image: -moz-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
+   background-image: -ms-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
+   background-image: -o-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
+   background-image: repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);      
+}
+
+.reviews-slider__text::before{
+    content: "";
+    position: absolute;     
+    top: 20px;
+    left: 53px; 
+    z-index: 400;
+    
+}
+.reviews-slider__text.z1::before{
+    content: "";
+    background-image: url("../images/review-quots.svg");
+    display: inline-block;       
+    width: 54px;
+    height: 40px;
+    z-index:-100;
+}
+.reviews__dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviews__item--dots{
+    color: $main-accent-color-darker;
+    width: 10px;
+    margin-bottom: 16px;
+}
+.reviews-slider__name{
+    line-height: 1.86;
+    text-align: center;
+}
+
+.slick-next:before{
+    display: none;
+}
+.slick-prev, .slick-next{
+    display: none;
+    right: 25px;    
+}

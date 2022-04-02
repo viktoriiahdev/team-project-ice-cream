@@ -11,7 +11,7 @@
   }
 }
 @media screen and(min-width:$medium) {
-  .about-content {
+  .about__content {
     display: flex;
     justify-content: center;
   }
@@ -30,7 +30,7 @@
   width: 280px;
   height: 279px;
 }
-.about-text__content {
+.about__text {
   max-width: 220px;
   font-weight: 500;
   font-size: 12px;

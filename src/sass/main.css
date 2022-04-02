@@ -192,4 +192,10 @@ img {
 .page-header {
   min-height: 94px;
 }
+
+.footer {
+  background-color: #FFF5F6;
+  padding-top: 48px;
+  padding-bottom: 20px;
+}
 /*# sourceMappingURL=main.css.map */

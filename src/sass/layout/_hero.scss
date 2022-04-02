@@ -1,0 +1,40 @@
+.hero {
+    padding-top: 194px;
+}
+.hero__title {
+    margin-bottom: 20px;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    width: 218px;
+    color: #FFFFFF;
+    @media screen and (min-width:1200px) {
+        
+    }
+}
+.hero-btn-list {
+    display: flex;
+    margin-bottom: 190px;
+}
+.hero-btn-list__item {
+    margin-right: 8px;
+
+}
+.cafe-list {
+  
+    @media screen and (max-width:767px){
+        display: none;
+    }
+}
+.hero__text {
+    width: 115px;
+    font-size: 8px;
+    line-height: 150%;
+    color: #FFFFFF;
+
+    
+}

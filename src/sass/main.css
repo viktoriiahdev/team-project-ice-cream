@@ -33,7 +33,7 @@ ul {
 }
 
 body {
-  background-color: #ffa5ba;
+  background-color: #fff5f6;
   font-family: "DM Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -45,7 +45,6 @@ body {
 body.with-overlay {
   overflow: hidden;
 }
-
 
 @media screen and (min-width: 768px) {
   body {
@@ -184,7 +183,6 @@ img {
   font-size: 34px;
   line-height: 1.147;
   letter-spacing: 0.04em;
-
   text-align: center;
   text-transform: uppercase;
   color: #d41443;
@@ -316,11 +314,34 @@ img {
 }
 
 .modal-buy {
-  background-color: aqua;
+  width: 90vw;
+  height: 581px;
+  padding: 40px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  background-color: #e17992;
 }
 
-.page-header {
-  min-height: 94px;
+.modal-buy__close {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
+.modal-buy__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 3%;
+  text-align: center;
+  margin-bottom: 20px;
+}
 /*# sourceMappingURL=main.css.map */

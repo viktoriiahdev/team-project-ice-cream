@@ -9,26 +9,54 @@
       margin-bottom: 60px;
     }
   }
-}
-@media screen and(min-width:$medium) {
-  .about__content {
-    display: flex;
-    justify-content: center;
+  background-image: url(../images/milk-wave_320.png);
+  background-repeat: no-repeat;
+  background-position: center 75%;
+  background-size: contain;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/milk-wave_320@2x.png);
+  }
+  @media screen and(min-width:$medium) {
+    background-image: url(../images/milk-wave_768.png);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/milk-wave_768@2x.png);
+    }
+  }
+  @media screen and(min-width:$large) {
+    background-image: url(../images/milk-wave_1200.png);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/milk-wave_1200@2x.png);
+    }
   }
 }
+
 .section__label {
-  display: block;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: calc(18 / 21);
-  text-align: center;
-  text-transform: uppercase;
-  color: $secondary-accent-color-pink;
   margin-bottom: 15px;
 }
-.about__image {
-  width: 280px;
-  height: 279px;
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  gap: 40px;
+  @media screen and (min-width: $medium) {
+    flex-direction: row;
+    gap: 30px;
+  }
+  @media screen and (min-width: $large) {
+    gap: 139px;
+    align-items: center;
+  }
 }
 .about__text {
   max-width: 220px;
@@ -48,8 +76,27 @@
   }
   @media screen and (min-width: $medium) {
     max-width: 334px;
+    font-size: 14px;
+    line-height: 1.76;
+    margin-bottom: 40px;
   }
   @media screen and (min-width: $large) {
     max-width: 463px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    &--gray {
+      font-size: 14px;
+      line-height: 1.94;
+      margin-bottom: 40px;
+    }
   }
+}
+.button {
+  align-items: center;
+}
+.button__icon {
+  width: 20px;
+  height: 18px;
+
+  background-color: inherit;
 }

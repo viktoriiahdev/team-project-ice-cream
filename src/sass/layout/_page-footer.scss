@@ -47,12 +47,15 @@ padding-bottom: 20px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    // &:hover {
+    //     fill: #D41443;
+    // }
+}
+.footer__socials-icon {
+    fill: #FEA5BB;
     &:hover {
         fill: #D41443;
     }
-}
-.footer__socials-icon {
-    fill: #FFA5BA;
 }
 .footer__tel-wrapper {
     margin-top: 40px;

@@ -181,10 +181,16 @@ img {
   font-family: "Titan One", cursive;
   font-style: normal;
   font-weight: 400;
+<<<<<<< HEAD
   font-size: 48px;
   line-height: 96.5%;
   letter-spacing: 0.01em;
   width: 218px;
+=======
+  font-size: 58px;
+  line-height: 1.138;
+  letter-spacing: 0.06em;
+>>>>>>> main
   text-align: center;
   text-transform: uppercase;
   color: #d41443;
@@ -193,6 +199,7 @@ img {
 .page-header {
   min-height: 94px;
 }
+<<<<<<< HEAD
 
 .hero {
   padding-top: 194px;
@@ -234,4 +241,6 @@ img {
   line-height: 150%;
   color: #FFFFFF;
 }
+=======
+>>>>>>> main
 /*# sourceMappingURL=main.css.map */

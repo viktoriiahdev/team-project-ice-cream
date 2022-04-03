@@ -1,0 +1,115 @@
+.contacts{
+    background-image: linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+    @media screen and (min-width: $small) {
+        background-image: linear-gradient(to top, $secondary-bg-color 75%, $main-bg-color 25%);
+    }
+    @media screen and (min-width: $medium){
+        background-image: linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+    }
+}
+.local{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    &__item{
+        padding: 40px;
+        background: $main-bg-color;
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+        @media screen and (min-width: $small) {
+            padding: 40px 32px;
+        }
+        @media screen and (min-width: $medium){
+            padding: 40px 32px;
+        }
+    }
+    &__city{
+        margin-top: 32px;
+        margin-bottom: 8px;
+        color: $maint-text-color-dark;
+        line-height: 1.86;
+        @media screen and (min-width: $small) {
+            margin-top: 20px;
+        }
+        @media screen and (min-width: $medium) {
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+    }
+    &__descr,
+    &__tel,
+    &__mail{
+        color: $secondary-text-color;
+        line-height: 1.83;
+        @media screen and (min-width: $small){
+            display: block;
+        }
+        @media screen and (min-width: $medium){
+            display: block;
+        }
+    }
+    &__line{
+        border: 1px solid $border-color;
+        margin: 32px 0;
+        @media screen and (min-width: $small) {
+            margin: 24px 0;
+        }
+        @media screen and (min-width: $medium){
+            margin: 32px 0;
+        }
+    }
+    &__day{
+        color: $maint-text-color-dark;
+        line-height: 1.86;
+    }
+    &__time{
+        color: $secondary-accent-color-pink;
+        line-height: 1.86;
+    }
+    @media screen and (min-width: $small){
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+    @media screen and (min-width: $medium) {
+        flex-wrap: nowrap;
+        font-size: 14px;
+    }
+}
+.local__place {
+    padding: 8px 16px;
+    line-height: 1.86;
+    color: $maint-text-color-light;
+    background-color: $secondary-accent-color-yellow;
+    border-radius: 6px;
+    &--green{
+        background-color: $secondary-accent-color-green;
+    }
+    @media screen and (min-width: $small) {
+        padding: 4px 25px;
+    }
+    @media screen and (min-width: $medium){
+        padding: 8px 16px;
+    }
+}
+
+.local-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 60px;
+    @media screen and (min-width: $small) {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 32px;
+    }
+    @media screen and (min-width: $medium){
+        flex-wrap: nowrap;
+        gap: 15px;
+        padding-top: 40px;
+    }
+}

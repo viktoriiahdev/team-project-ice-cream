@@ -1,3 +1,87 @@
-.page-header {
-  min-height: 94px;
+.page-header{
+ /* min-height: 94px;*/
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: auto;
+}
+.header__container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  justify-content: space-between;
+  width: 320px;
+  align-items: center;
+}
+.modal__close{
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+.logo__svg{
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+
+}
+.logo{
+  display: flex;
+  align-items: center;
+
+  font-family: 'Titan One';
+  font-size: 24px;
+  line-height: calc(39 / 24);
+  letter-spacing: 0.04em;
+  color: $main-accent-color;
+}
+.header__nav{
+  width: 250px;
+  height: 502px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 320px;
+  transition: transform 250ms linear;
+  
+  color: $maint-text-color-light;
+  background: $modal-bg-color;
+}
+.modal__close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  fill: $main-bg-color;
+}
+
+.header__menu-btn{
+  width: 12px;
+  height: 20px;
+  background-color: transparent;
+
+  &:hover ~.header__nav, &:focus ~.header__nav{  //висит на ховере
+    transform: translateX(-250px);
+  }
+}
+.header__menu-svg{
+  fill: $main-accent-color;
+  height: 20px;
+  width: 12px;
+}
+.header__btn-mb{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
+  margin-bottom: 32px;
+}
+.header__nav-link{
+  color: $main-bg-color;
+  &:hover, &:focus{
+    color: $main-accent-color;
+  }
+}
+.header__nav-item:not(:last-child){
+  margin-bottom: 22px;
 }

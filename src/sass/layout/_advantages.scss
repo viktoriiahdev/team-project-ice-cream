@@ -1,0 +1,118 @@
+.advantages {
+  background-color: $secondary-bg-color;
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media screen and(min-width:$medium) {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 22px;
+  }
+  @media screen and(min-width:$large) {
+    justify-content: space-between;
+  }
+}
+
+.advantages__amount {
+  font-family: $titan-one;
+  color: $main-accent-color;
+  font-size: 36px;
+  line-height: calc(41 / 36);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+
+  @media screen and(min-width:$medium) {
+    font-size: 48px;
+    line-height: calc(55 / 48);
+  }
+  @media screen and(min-width:$large) {
+    font-size: 58px;
+    line-height: calc(66 / 58);
+  }
+}
+
+.advantages__text {
+  font-family: $dm-sans;
+  color: $maint-text-color-dark;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: calc(20 / 12);
+
+  @media screen and(min-width:$medium) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
+
+  @media screen and(min-width:$large) {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+  }
+}
+
+.advantages__item {
+  max-width: 230px;
+  // &:last-child {
+  //   // margin-bottom: 0;
+  // }
+
+  @media screen and(min-width:$medium) {
+    max-width: 180px;
+  }
+  @media screen and(min-width:$large) {
+    max-width: 317px;
+  }
+  &::before {
+    display: inline-block;
+    margin-bottom: 16px;
+    content: '';
+    height: 50px;
+
+    @media screen and(min-width:$medium) {
+      margin-bottom: 36px;
+    }
+    @media screen and(min-width:$large) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.advantages__item--1::before {
+  width: 33px;
+
+  background: url(..//images/advantage-img-1.png);
+  @media only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and(min-resolution: 2dppx) {
+    background-image: url(..//images/advantage-img-1@x2.png);
+    background-size: contain;
+  }
+}
+
+.advantages__item--2::before {
+  width: 50px;
+
+  background: url(..//images/advantage-img-2.png);
+  @media only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and(min-resolution: 2dppx) {
+    background-image: url(..//images/advantage-img-2@x2.png);
+    background-size: contain;
+  }
+}
+
+.advantages__item--3::before {
+  width: 44px;
+
+  background: url(..//images/advantage-img-3.png);
+  @media only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and(min-resolution: 2dppx) {
+    background-image: url(..//images/advantage-img-3@x2.png);
+    background-size: contain;
+  }
+}

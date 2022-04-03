@@ -19,26 +19,43 @@
     (min-resolution: 2dppx) {
     background-image: url(../images/milk-wave_320@2x.png);
   }
+  @media screen and(min-width:$medium) {
+    background-image: url(../images/milk-wave_768.png);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/milk-wave_768@2x.png);
+    }
+  }
+  @media screen and(min-width:$large) {
+    background-image: url(../images/milk-wave_1200.png);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/milk-wave_1200@2x.png);
+    }
+  }
 }
 
 .section__label {
   margin-bottom: 15px;
 }
-@media screen and(min-width:$medium) {
-  .about__content {
-    display: flex;
-    justify-content: center;
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  gap: 40px;
+  @media screen and (min-width: $medium) {
+    flex-direction: row;
     gap: 30px;
   }
-}
-.about__image {
-  max-width: 280px;
-  height: auto;
-  @media screen and (max-width: 767px) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: $medium) {
-    max-width: 336px;
+  @media screen and (min-width: $large) {
+    gap: 139px;
+    align-items: center;
   }
 }
 .about__text {
@@ -59,8 +76,27 @@
   }
   @media screen and (min-width: $medium) {
     max-width: 334px;
+    font-size: 14px;
+    line-height: 1.76;
+    margin-bottom: 40px;
   }
   @media screen and (min-width: $large) {
     max-width: 463px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    &--gray {
+      font-size: 14px;
+      line-height: 1.94;
+      margin-bottom: 40px;
+    }
   }
+}
+.button {
+  align-items: center;
+}
+.button__icon {
+  width: 20px;
+  height: 18px;
+
+  background-color: inherit;
 }

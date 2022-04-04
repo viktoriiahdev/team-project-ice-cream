@@ -2,9 +2,8 @@
     margin: 0 auto;
     padding: 0 15px;
 
-    outline: solid 1px red;
-    // outline: none;
-    
+    outline: none;
+        
     @media screen and (min-width: $small) {
         width: $small;
     }

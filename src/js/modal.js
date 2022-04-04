@@ -1,43 +1,55 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+const backdropHiddenClass = 'backdrop--is-hidden';
+const backdrop = document.querySelector('[data-backdrop]');
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+const modalHiddenClass = 'modal--hidden';
+const modalContent = document.querySelectorAll('.modal');
 
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
+const openModalBtn = document.querySelectorAll('[data-modal-open]');
+const closeModalBtn = document.querySelectorAll('[data-modal-close]');
 
-// modal gallery
-const backdrop = document.querySelector('[data-backdrop-gallery]');
-const modal = document.querySelector('[data-modal-gallery]');
-const modalImg = document.querySelector('[data-modal-image]');
+function openModal() {
+  console.log(this);
+  modal = document.querySelector('[data-modal-' + this.dataset.source + ']');
+  modal.classList.remove(modalHiddenClass);
+  backdrop.classList.remove(backdropHiddenClass);
+}
 
-const images = Array.from(document.getElementsByClassName('gallery__image'));
+//закривать при кліку в будь-якому місці навколо модального вікна
+function closeModal() {
+  backdrop.classList.add(backdropHiddenClass);
+  modal.classList.add(modalHiddenClass);
+}
 
-const hiddenClass = 'backdrop--is-hidden';
+openModalBtn.forEach(btn => {
+  btn.onclick = openModal;
+});
 
-images.forEach(img => {
-  img.onclick = function () {
-    console.log('click');
-    backdrop.classList.remove(hiddenClass);
-    modalImg.src = img.src;
+closeModalBtn.forEach(btn => {
+  btn.onclick = closeModal;
+});
+
+backdrop.addEventListener('click', closeModal);
+
+//не закривать при кліку на модальному вікні
+modalContent.forEach(el => {
+  el.onclick = function (event) {
+    console.log(this);
+    event.stopPropagation();
   };
 });
 
-backdrop.addEventListener('click', closeImage);
+// modal gallery
+const modalImg = document.querySelector('[data-modal-image]');
+const images = document.querySelectorAll('.gallery__image');
 
-function openImage(img) {
-  console.log('click');
-  backdrop.classList.remove(hiddenClass);
-  modalImg.src = img.src;
-}
+images.forEach(img => {
+  img.onclick = openImage;
+});
 
-function closeImage() {
-  if (!this.classList.contains('gallery__image')) backdrop.classList.add(hiddenClass);
+// відкривать зображення в модальному вікні
+function openImage() {
+  modal = document.querySelector('[data-modal-' + this.dataset.source + ']');
+  modal.classList.remove(modalHiddenClass);
+  backdrop.classList.remove(backdropHiddenClass);
+  modalImg.src = this.src;
 }

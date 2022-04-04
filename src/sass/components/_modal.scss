@@ -1,4 +1,6 @@
 .modal {
+  position: absolute;
+
   // стилі для модального вікна - галерея
   &--gallery {
     transform: scale(1);
@@ -7,7 +9,9 @@
     max-height: 80%;
     display: flex;
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform, opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     .backdrop--is-hidden & {
       transform: scale(1.1);
@@ -17,5 +21,11 @@
       object-fit: contain;
       object-position: center;
     }
+  }
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }

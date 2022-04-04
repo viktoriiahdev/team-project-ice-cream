@@ -20,6 +20,7 @@ padding-bottom: 20px;
         margin-bottom: 0px;
         width: 370px;
         margin-right: 0;
+        flex-direction: column;
     }
 }
 .footer__text {
@@ -123,12 +124,11 @@ padding-bottom: 20px;
     padding-top: 16px;
     border-top: 1px solid #E1E1E1;
     @media screen and (min-width: 768px) {
-        // padding-left: auto;
-        // padding-right: auto;
         padding-bottom: 8px;
         padding-top: 8px;
         width: 100%;
         display: inline;
+        text-align: center;
     }
 }
 .footer__rights {

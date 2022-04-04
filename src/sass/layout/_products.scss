@@ -75,8 +75,7 @@
         transform: translate(-50%);
         @media screen and(min-width:$medium) {
             top: 37%;
-        }
-        
+        }        
         @media screen and(min-width:$large) {
             top: 44%;
         }
@@ -218,14 +217,14 @@
     font-family: $titan-one;
     font-weight: 400;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 1.15;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;    
     color: $maint-text-color-light;
     @media screen and(min-width:$large) {
         font-size: 30px;
-        line-height: 34px;
+        line-height: 1.13;
     }
 }
 
@@ -234,17 +233,17 @@
     font-family: $dm-sans;
     font-weight: 700;
     font-size: 14px;
-    line-height: 21px; 
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.04em;    
     color: $maint-text-color-light;
-    @media screen and(min-width:$medium) {
-        line-height: 25px;        
+    @media screen and(min-width:$medium) {       
+        line-height: 1.78;
     }
     @media screen and(min-width:$large) {
         margin-bottom: 60px;
         font-size: 16px;
-        line-height: 28px;
+        line-height: 1.75;
     }
 }
 

@@ -36,20 +36,15 @@
     color: $secondary-accent-color-pink;
     text-align: start;
     width: 232px;
-    height: 42px;
-
     @media screen and (min-width: 768px) {
         font-size: 26px;
         line-height: 1.15;
         width: 340px;
-        height: 57px;
     }
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
         font-size: 30px;
         line-height: 1.13;
         width: 472px;
-        height: 34px;
     }
 }
 
@@ -60,16 +55,12 @@
     letter-spacing: 0.04em;
     color: $main-accent-color;
     width: 200px;
-    height: 76px;
-
     @media screen and (min-width: 768px) {
         font-size: 48px;
         line-height: 1.14;
         width: 340px;
-        height: 110px;
     }
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
         font-size: 58px;
         line-height: 1.13;
         width: 474px;
@@ -117,13 +108,11 @@
     line-height: 1.83;
     text-align: right;
     color: $maint-text-color-dark;
-
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.85;
     }
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 1.87;
     }
@@ -137,13 +126,11 @@
     line-height: 1.83;
     text-align: right;
     color: $main-accent-color;
-
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.85;
     }
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 1.87;
     }
@@ -173,7 +160,6 @@
     margin-right: auto;
     max-width: 280px;
     display: block;
-
     @media screen and (min-width: 768px) {
         display: inline;
     }

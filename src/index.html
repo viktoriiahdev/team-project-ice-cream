@@ -34,5 +34,52 @@
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+
+    <script type="text/javascript">
+      const backdrop = document.querySelector('[data-backdrop-gallery]');
+      const modal = document.querySelector('[data-modal-gallery]');
+      const modalImg = document.querySelector('[data-modal-image]');
+
+      const images = Array.from(document.getElementsByClassName('gallery__image'));
+
+      const hiddenClass = 'backdrop--is-hidden';
+
+      images.forEach(img => {
+        img.onclick = function () {
+          console.log('click');
+          backdrop.classList.remove(hiddenClass);
+          modalImg.src = img.src;
+        };
+      });
+
+      backdrop.addEventListener('click', closeImage);
+
+      function openImage(img) {
+        console.log('click');
+        backdrop.classList.remove(hiddenClass);
+        modalImg.src = img.src;
+      }
+
+      function closeImage() {
+        if (!this.classList.contains('gallery__image')) backdrop.classList.add(hiddenClass);
+      }
+
+      // (() => {
+      //   const refs = {
+      //     openModalBtn: document.querySelector('[data-modal-open]'),
+      //     closeModalBtn: document.querySelector('[data-modal-close]'),
+      //     modal: document.querySelector('[data-modal]'),
+      //     body: document.querySelector('[data-body]'),
+      //   };
+
+      //   refs.openModalBtn.addEventListener('click', toggleModal);
+      //   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      //   function toggleModal() {
+      //     refs.modal.classList.toggle('backdrop--is-hidden');
+      //     refs.body.classList.toggle('with-overlay');
+      //   }
+      // })();
+    </script>
   </body>
 </html>

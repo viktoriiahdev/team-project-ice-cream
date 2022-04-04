@@ -12,12 +12,14 @@ padding-bottom: 20px;
 }
 .footer__text-wrapper {
     margin-bottom: 40px;
+    gap: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     @media screen and (min-width: 768px) {
         margin-bottom: 0px;
+        gap: 12px;
         width: 370px;
         margin-right: 0;
         flex-direction: column;
@@ -127,7 +129,6 @@ padding-bottom: 20px;
         padding-bottom: 8px;
         padding-top: 8px;
         width: 100%;
-        display: inline;
         text-align: center;
     }
 }

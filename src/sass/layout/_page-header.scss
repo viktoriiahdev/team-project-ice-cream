@@ -1,33 +1,40 @@
-.page-header{
- /* min-height: 94px;*/
-  width: 320px;
+//@media screen and (min-width: $medium)
+//@media screen and (min-width: $large)
+.page-header {
+  /* min-height: 94px;*/
   margin-left: auto;
   margin-right: auto;
 
   outline: auto;
 }
-.header__container{
+.header__container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   padding-top: 8px;
   justify-content: space-between;
-  width: 320px;
   align-items: center;
+
+  @media screen and (min-width: $medium) {
+    justify-content: flex-end;
+    padding-top: 32px;
+  }
+  @media screen and (min-width: $large) {
+    justify-content: space-between;
+    padding-top: 37px;
+  }
 }
-.modal__close{
+.modal__close {
   width: 14px;
   height: 14px;
   fill: currentColor;
 }
-.logo__svg{
+.logo__svg {
   width: 50px;
   height: 50px;
   margin-right: 15px;
-  
-
 }
-.logo{
+.logo {
   display: flex;
   align-items: center;
 
@@ -36,53 +43,115 @@
   line-height: calc(39 / 24);
   letter-spacing: 0.04em;
   color: $main-accent-color;
+
+  @media screen and (min-width: $medium) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: $large) {
+    margin-right: 0;
+  }
 }
-.header__nav{
+.header__nav {
+  visibility: hidden;
   width: 250px;
   height: 502px;
   padding: 20px;
   position: absolute;
   top: 0;
-  left: 320px;
+  left: $small;
   transition: transform 250ms linear;
-  
+
   color: $maint-text-color-light;
   background: $modal-bg-color;
+
+  @media screen and (min-width: $medium) {
+    left: $medium;
+    height: 100vh;
+  }
+  @media screen and (min-width: $large) {
+    visibility: visible;
+    display: flex;
+    position: static;
+    height: auto;
+    background: inherit;
+    flex-wrap: nowrap;
+    padding: 0;
+    width: auto;
+  }
 }
-.modal__close{
+.modal__close {
   position: absolute;
   right: 20px;
   top: 20px;
 
   fill: $main-bg-color;
 }
+.header__mb-btn {
+  @media screen and (min-width: $large) {
+    display: none;
+  }
+}
 
-.header__menu-btn{
+.header__menu-btn {
   width: 12px;
   height: 20px;
   background-color: transparent;
 
-  &:hover ~.header__nav, &:focus ~.header__nav{  //висит на ховере
+  &:hover ~ .header__nav,
+  &:focus ~ .header__nav {
+    //висит на ховере
+    visibility: visible;
     transform: translateX(-250px);
   }
+  @media screen and (min-width: $medium) {
+    margin-right: 24px;
+  }
+  @media screen and (min-width: $large) {
+    display: none;
+  }
 }
-.header__menu-svg{
+.header__menu-svg {
   fill: $main-accent-color;
   height: 20px;
   width: 12px;
 }
-.header__btn-mb{
+.header__btn-mb {
   margin-left: auto;
   margin-right: auto;
   margin-top: 26px;
   margin-bottom: 32px;
+  @media screen and (min-width: $large) {
+    display: none;
+  }
 }
-.header__nav-link{
+.header__nav-list {
+  @media screen and (min-width: $large) {
+    display: flex;
+  }
+}
+.header__nav-link {
   color: $main-bg-color;
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     color: $main-accent-color;
   }
 }
-.header__nav-item:not(:last-child){
+.header__nav-item {
+  @media screen and (min-width: $large) {
+    margin-bottom: 0;
+  }
+}
+.header__nav-item:not(:last-child) {
   margin-bottom: 22px;
+  @media screen and (min-width: $large) {
+    margin-right: 35px;
+    margin-bottom: 0;
+  }
+}
+
+.header__btn-mb2 {
+  display: none;
+  @media screen and (min-width: $medium) {
+    display: block;
+  }
 }

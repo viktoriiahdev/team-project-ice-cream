@@ -46,15 +46,12 @@ padding-bottom: 20px;
     }
 }
 .footer__text--accent {
-    font-family: $titan-one;
-    font-style: normal;
     font-weight: 400;
     font-size: 34px;
     line-height: 39px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $main-accent-color;
-    text-align: start;
     width: 200px;
     height: 76px;
     @media screen and (min-width: 768px) {

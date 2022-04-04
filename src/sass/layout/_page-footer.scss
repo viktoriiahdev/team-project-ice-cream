@@ -32,13 +32,11 @@ padding-bottom: 20px;
     text-transform: uppercase;
     color: $secondary-accent-color-pink;
     text-align: start;
-    margin-bottom: 16px;
     width: 232px;
     height: 42px;
     @media screen and (min-width: 768px) {
         font-size: 26px;
         line-height: 1.15;
-        margin-bottom: 12px; 
         width: 340px;
         height: 57px;
     }

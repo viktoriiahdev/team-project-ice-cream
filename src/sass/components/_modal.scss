@@ -1,0 +1,21 @@
+.modal {
+  // стилі для модального вікна - галерея
+  &--gallery {
+    transform: scale(1);
+
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .backdrop--is-hidden & {
+      transform: scale(1.1);
+    }
+
+    .modal__content {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}

@@ -1,7 +1,6 @@
 .footer {
 background-color: $secondary-bg-color;
 padding-top: 20px;
-padding-bottom: 20px;
 }
 .footer__container {
     @media screen and (min-width: 768px) {
@@ -20,7 +19,6 @@ padding-bottom: 20px;
     @media screen and (min-width: 768px) {
         gap: 12px;
         width: 370px;
-        margin-right: 0;
         flex-direction: column;
     }
 }
@@ -41,6 +39,12 @@ padding-bottom: 20px;
         width: 340px;
         height: 57px;
     }
+    @media screen and (min-width: 768px) {
+        font-size: 30px;
+        line-height: 1.13;
+        width: 472px;
+        height: 34px;
+    }
 }
 .footer__text--accent {
     font-weight: 400;
@@ -55,6 +59,12 @@ padding-bottom: 20px;
         line-height: 1.14;
         width: 340px;
         height: 110px;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 58px;
+        line-height: 1.13;
+        width: 474px;
+        height: 66px;
     }
 }
 .footer__socials {
@@ -84,13 +94,6 @@ padding-bottom: 20px;
         height: 34px;
     }
 }
-.footer__tel-wrapper {
-    // margin-top: 40px;
-    // margin-bottom: 56px;
-    @media screen and (min-width: 768px) {
-        // margin-bottom: 127px;
-    }
-}
 .footer__tel {
     font-family: $dm-sans;
     font-style: normal;
@@ -102,6 +105,10 @@ padding-bottom: 20px;
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.85;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 1.87;
     }
 }
 .footer-tel__number {
@@ -115,6 +122,10 @@ padding-bottom: 20px;
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.85;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 1.87;
     }
 }
 .footer__rights-wrapper {

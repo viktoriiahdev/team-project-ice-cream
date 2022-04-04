@@ -1,30 +1,86 @@
 <section class="hero">
   <div class="container hero__container">
-    <h1 class="hero__title">ice cream made with <span class="section__title">passion</span></h1>
-    <ul class="hero-btn-list">
-      <li class="hero-btn-list__item"><button class="button button--main">Products</button></li>
-      <li><button class="button button--accent">How it’s made?</button></li>
-    </ul>
-    <ul class="cafe-list">
-      <li class="cafe-list__item">
-        <span class="cafe-list__text">16</span>
-        <span class="cafe-list__description">cafes</span>
-      </li>
-      <li class="cafe-list__item">
-        <span class="cafe-list__text">23</span>
-        <span class="cafe-list__description">food trucks</span>
-      </li>
-    </ul>
+    <div class="hero__ice-wrap">
+      <picture>
+        <source
+          srcset="images/ice-cream_1200.png 1x, images/ice-cream_1200@2x.png 2x"
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="images/ice-cream_768.png 1x, images/ice-cream_768@2x.png 2x"
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="images/ice-cream_320.png 1x, images/ice-cream_320@2x.png 2x"
+          media="(min-width:320px)"
+        />
+        <img src="images/ice-cream_1200.png" alt="photo" />
+      </picture>
+    </div>
+    <div class="hero__list-wrap">
+      <div class="hero__title-btn-wrap">
+        <h1 class="hero__title">
+          ice cream <br />
+          made with<br />
+          <span class="section__title">passion</span>
+        </h1>
 
-    <p class="hero__text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et
-    </p>
-    <svg width="18px" height="18px">
-      <use></use>
-    </svg>
-    <picture> </picture>
-    <div><picture> </picture></div>
-    <picture></picture>
+        <ul class="hero-btn-list">
+          <li class="hero-btn-list__item"><button class="button button--main">Products</button></li>
+          <li><button class="button button--accent">How it’s made?</button></li>
+        </ul>
+      </div>
+      <div class="img-cafe-wrap">
+        <ul class="cafe-list">
+          <li class="cafe-list__item">
+            <span class="cafe-list__text">16</span>
+            <span class="cafe-list__description">cafes</span>
+          </li>
+          <li class="cafe-list__item">
+            <span class="cafe-list__text">23</span>
+            <span class="cafe-list__description">food trucks</span>
+          </li>
+        </ul>
+        <div class="hero__img-wrap-2">
+          <picture>
+            <source
+              srcset="images/tasty-pic_1200.png 1x, images/tasty-pic_1200@2x.png 2x"
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="images/tasty-pic_768.png 1x, images/tasty-pic_768@2x.png 2x"
+              media="(min-width:768px)"
+            />
+            <img src="images/tasty-pic_1200.png" alt="photo" />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wrap">
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+      <svg width="18px" height="18px">
+        <use></use>
+      </svg>
+    </div>
+
+    <div class="hero__img-wrap">
+      <picture>
+        <source
+          srcset="images/jar-milk_1200.png 1x, images/jar-milk_1200@2x.png 2x"
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="images/jar-milk_768.png 1x, images/jar-milk_768@2x.png 2x"
+          media="(min-width:768px)"
+        />
+        <img src="images/jar-milk_1200.png" alt="photo" />
+      </picture>
+    </div>
+    <div>
+      <picture></picture>
+    </div>
   </div>
 </section>

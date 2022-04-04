@@ -16,6 +16,7 @@ padding-bottom: 20px;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 40px;
     @media screen and (min-width: 768px) {
         gap: 12px;
         width: 370px;
@@ -117,17 +118,12 @@ padding-bottom: 20px;
     }
 }
 .footer__rights-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 16px;
+    padding: 8px 0;
     border-top: 1px solid #E1E1E1;
+    margin-top: 40px;
     @media screen and (min-width: 768px) {
-        padding-left: 0;
-        padding-right: 0;
         width: 100%;
         text-align: center;
-        margin-top: 8px;
     }
 }
 .footer__rights {

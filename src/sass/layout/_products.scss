@@ -26,11 +26,11 @@
 }
 
 .products-list__item {
+    position: relative;
     border-radius: 24px;
     @media screen and(min-width:$small) and (max-width: 767px) {
         height: 489px;  
-        padding: 0px 39px 40px 41px;   
-        
+        padding: 160px 39px 40px 41px;           
         &:not(:last-child) {
             margin-bottom: 140px;
         }
@@ -55,20 +55,39 @@
         background-color: #C2E297;        
     }
     &::before {
-        display: inline-block;
-        margin-bottom: 20px;
+        display: inline-block;    
         content: '';
-        height: 280px;
+        top: 57%;
+        left: 50%;        
+        transform: translate(-50%, -150%);
         @media screen and(min-width:$medium) {
-            margin-bottom: 32px;
+            top: 42%;
         }
-    
+        @media screen and(min-width:$large) {
+           top: 62%; 
+        }    
     }
+   &::after {
+        display: inline-block;
+        content: '';
+        top: -85%;
+        left: 50%;
+        transform: translate(-50%);
+        @media screen and(min-width:$medium) {
+            top: 37%;
+        }
+        
+        @media screen and(min-width:$large) {
+            top: 44%;
+        }
+   } 
 }
 
-.products-list__item--1::before {   
-    width: 280px;
-    @media screen and(min-width:$small) {       
+.products-list__item--b1::before {   
+    position: absolute;
+    @media screen and(min-width:$small) {  
+        width: 280px;
+        height: 280px;          
         background: url(..//images/prod-1_320.png); 
         @media only screen and (min-device-pixel-ratio: 2),
         only screen and (min-resolution: 192dpi),
@@ -79,6 +98,8 @@
         }
     }
     @media screen and(min-width:$medium) {
+        width: 224px;
+        height: 224px;
         background: url(..//images/prod-1_768.png);    
         @media only screen and (min-device-pixel-ratio: 2),
         only screen and (min-resolution: 192dpi),
@@ -89,6 +110,8 @@
         }
     }
     @media screen and(min-width:$large) {
+        width: 394px;
+        height: 394px;
         background: url(..//images/prod-1_1200.png);    
         @media only screen and (min-device-pixel-ratio: 2),
         only screen and (min-resolution: 192dpi),
@@ -100,7 +123,98 @@
     }
 }
 
+.products-list__item--b2::before {
+    position: absolute;
+    @media screen and(min-width:$small) {
+        width: 280px;
+        height: 280px;
+        background: url(..//images/prod-2_320.png);
+        background-position: center;    
+        @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+            background-image: url(..//images/prod-2_320@2x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }    
+    @media screen and(min-width:$medium) {
+        width: 224px;
+        height: 224px;
+        background: url(..//images/prod-2_768.png);    
+        @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+            background-image: url(..//images/prod-2_768@2x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }    
+    @media screen and(min-width:$large) {
+        width: 394px;
+        height: 394px;
+        background: url(..//images/prod-2_1200.png);    
+        @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+            background-image: url(..//images/prod-2_1200@2x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.products-list__item--b3::before {
+    position: absolute;
+    @media screen and(min-width:$small) {
+        width: 280px;
+        height: 280px;
+        background: url(..//images/prod-3_320.png);
+        background-position: center;
+        @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+            background-image: url(..//images/prod-3_320@2x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    @media screen and(min-width:$medium) {
+        width: 224px;
+        height: 224px;
+        background: url(..//images/prod-3_768.png);
+        @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+            background-image: url(..//images/prod-3_768@2x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    @media screen and(min-width:$large) {
+        width: 394px;
+        height: 394px;
+        background: url(..//images/prod-3_1200.png);
+        @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+            background-image: url(..//images/prod-3_1200@2x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.products-list__item--a::after {
+    position: absolute;
+    width: 26px;
+    height: 6px;
+    background: url(..//images/3dots.png);
+    background-position: center;
+}
+
 .product-list__title {
+    margin-bottom: 70px;
     font-family: $titan-one;
     font-weight: 400;
     font-size: 20px;
@@ -116,6 +230,7 @@
 }
 
 .product-list__text { 
+    margin-bottom: 32px;
     font-family: $dm-sans;
     font-weight: 700;
     font-size: 14px;
@@ -127,6 +242,7 @@
         line-height: 25px;        
     }
     @media screen and(min-width:$large) {
+        margin-bottom: 60px;
         font-size: 16px;
         line-height: 28px;
     }
@@ -136,10 +252,6 @@
     display: flex;
     align-self: center;
     justify-content: center;    
-    margin-top: 32px;
-    @media screen and(min-width:$large) {
-        margin-top: 60px;
-    }
 }
 
 .products-list__btn {

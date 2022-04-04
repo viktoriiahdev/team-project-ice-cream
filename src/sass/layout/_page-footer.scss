@@ -8,7 +8,6 @@ padding-bottom: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: baseline;
     }
 }
 .footer__text-wrapper {
@@ -124,10 +123,12 @@ padding-bottom: 20px;
     padding-top: 16px;
     border-top: 1px solid #E1E1E1;
     @media screen and (min-width: 768px) {
-        padding-left: auto;
-        padding-right: auto;
+        // padding-left: auto;
+        // padding-right: auto;
         padding-bottom: 8px;
         padding-top: 8px;
+        width: 100%;
+        display: inline;
     }
 }
 .footer__rights {

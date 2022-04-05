@@ -126,6 +126,10 @@
     line-height: 1.83;
     text-align: right;
     color: $main-accent-color;
+    &:hover,
+    &:focus {
+        color: $main-accent-color-darker;
+    }
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.85;

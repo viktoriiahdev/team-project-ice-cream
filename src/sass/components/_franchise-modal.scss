@@ -22,7 +22,7 @@
     }
 }
 .franchise-modal {
-    background-color: $modal-bg-color;
+    background-color: $main-bg-color;
 }
 .franchise-modal__close-button {
     width: 30px;
@@ -70,7 +70,7 @@
     line-height: 18px;
     text-transform: capitalize;
     text-align: center;
-    color: $maint-text-color-light;
+    color: $secondary-accent-color-pink;
     margin-bottom: 5px;
 }
 .franchise-modal__second-text { 

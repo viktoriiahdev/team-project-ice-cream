@@ -1,7 +1,7 @@
 .reviews{
     background-color: $main-bg-color;
 }
-.reviews-slider__img{        
+.review-slider__img{        
     width: 85px;
     height: 85px;
     border-radius: 50%;
@@ -14,7 +14,7 @@
         margin-bottom: 16px;
     }
 }   
-.reviews-slider__text-wrap{
+.review-slider__text-wrap{
     position: relative; 
     width: 100%;
     height: auto;
@@ -34,7 +34,7 @@
         background-color: #FAFAFA;
     }
 }
-.reviews-slider{
+.review-slide{
     @media screen and (min-width: $medium) {        
         padding-left: 59px;
         padding-right: 59px; 
@@ -44,27 +44,29 @@
         padding-right: 108px; 
     }     
 }
-.reviews-slider__text{       
+.review-slider__text{       
    color:$maint-text-color-dark; 
    text-indent: 20px;
    line-height: 2.58;    
-   background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
-   background-image: -moz-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
-   background-image: -ms-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
-   background-image: -o-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);
-   background-image: repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 31px, transparent 20px);  
+   background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 28px, #E1E1E1 30px, transparent 20px);
+   background-image: -moz-repeating-linear-gradient(top, transparent 0px, transparent 28px, #E1E1E1 30px, transparent 20px);
+   background-image: -ms-repeating-linear-gradient(top, transparent 0px, transparent 28px, #E1E1E1 30px, transparent 20px);
+   background-image: -o-repeating-linear-gradient(top, transparent 0px, transparent 28px, #E1E1E1 30px, transparent 20px);
+   background-image: repeating-linear-gradient(top, transparent 0px, transparent 28px, #E1E1E1 30px, transparent 20px);  
    @media screen and (min-width: $medium) {       
         text-indent: 35px;          
         line-height: 2.21;        
     }
     @media screen and (min-width: $large) {        
         text-indent: 20px; 
-        line-height: 1.86; 
-        min-height: 75px;                                
+        line-height: 1.86;         
+                                     
     }       
 }
-
-.reviews-slider__text::before{
+.text-wrap{
+    display: inline-block;    
+}
+.review-slider__text::before{
     content: "";
     position: absolute;     
     top: 20px;
@@ -79,7 +81,7 @@
         left:105px;
     }      
 }
-.reviews-slider__text.z1::before{
+.review-slider__text.z1::before{
     content: "";
     background-image: url("../images/review-quots.svg");
     display: inline-block;       
@@ -99,10 +101,10 @@
     color: $main-accent-color-darker; 
     font-size: 16px;      
 }
-.reviews__item--dots + .reviews__item--dots{
+.review__item--dots + .review__item--dots{
    margin-left: 10px; 
 }
-.reviews-slider__name{
+.review-slider__name{
     line-height: 1.86;
     text-align: center;
     @media screen and (min-width: $medium) {        
@@ -114,25 +116,26 @@
         line-height: 1.85;
     }       
 }
-.reviews__dots{
+.review__dots{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.reviews__dots{
+.review__dots{
     margin-bottom: 16px;  
 }
-.reviews__item--dots{
+.review__item--dots{
     color: $main-accent-color-darker; 
     font-size: 16px;      
 }
-.reviews__item--dots + .reviews__item--dots{
+.review__item--dots + .reviews__item--dots{
    margin-left: 10px; 
 }
-.reviews-slider__name{
+.review-slider__name{
     position: relative;
     line-height: 1.86;
     text-align: center;
+    margin-bottom: 46px;
     @media screen and (min-width: $medium) {        
       font-size: 16px;
       line-height: 1.87;
@@ -142,41 +145,81 @@
         line-height: 1.85;
     }       
 }
-.slick-dots::after{
-    content: url("data:image/svg+xml,%3Csvg width='72' height='12' viewBox='0 0 72 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='36' cy='6' r='6' fill='%23D9D9D9'/%3E%3Cpath d='M11.8497 6.28727C12.0672 6.06411 12.0462 5.72207 11.8028 5.5235L6.43981 1.14624C6.19638 0.947669 5.80611 0.951828 5.56781 1.15561L0.186634 5.75688C-0.0516656 5.96066 -0.0633615 6.30227 0.160739 6.51955L0.295652 6.65062C0.519479 6.86791 0.88127 6.89381 1.10322 6.70831L1.50538 6.37236V11.2907C1.50538 11.5924 1.7675 11.8367 2.09076 11.8367H4.18836C4.51162 11.8367 4.77374 11.5924 4.77374 11.2907V7.84984H7.44925V11.2907C7.4446 11.5922 7.6759 11.8365 7.99916 11.8365H10.2221C10.5453 11.8365 10.8075 11.5922 10.8075 11.2905V6.44161C10.8075 6.44161 10.9186 6.5324 11.0556 6.64474C11.1924 6.75687 11.4797 6.66697 11.6972 6.44358L11.8497 6.28727Z' fill='%23D31342'/%3E%3Ccircle cx='66' cy='6' r='6' fill='%23D9D9D9'/%3E%3C/svg%3E");
-    position: absolute;
-    height: 72px;
-    top: 0;
-    left: 50%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);    
-}
-
-.slick-dots li button:before{
-    color:#D9D9D9; 
-    background-color: #D9D9D9;
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    opacity: 0;          
-}
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    @if $index {
+      @return str-slice($string, 1, $index - 1) + $replace +
+        str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+  }
 .slick-dots li {
-    margin: 0 5px;      
-}
-.slick-dots>.slick-active{
-    background-image:url("../images/rewiev-dots-active.svg") ;
-    background-repeat: no-repeat;    
-    width: 30px;
-    height: 30px;  
-    opacity: 0;   
-}
-.slick-dots li.slick-active button:before {
-    color:transparent;
-    opacity: 0;
-}
-.slick-slider .slick-track, .slick-slider .slick-list{
+    margin: 0 5px;
+  
+    button:before {
+      font-size: 0;
+      opacity: 1;
+      color: #d9d9d9;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: currentColor;
+    }
+  
+    button:hover,
+    button:focus {
+      &:before {
+        opacity: 0.75;
+        color: $main-accent-color;
+      }
+    }
+  
+    &:first-child {
+      button {
+        &:before {
+          $color: #d9d9d9;
+  
+          background: none;
+          background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2399 5.77539C12.4646 5.53163 12.4429 5.15801 12.1914 4.94111L6.65187 0.159738C6.40043 -0.0571627 5.99731 -0.052619 5.75117 0.169981L0.19278 5.19603C-0.053367 5.41863 -0.065448 5.79177 0.166032 6.02912L0.305389 6.17228C0.536586 6.40963 0.910291 6.43793 1.13955 6.2353L1.55495 5.86834V11.2407C1.55495 11.5703 1.82571 11.8372 2.15961 11.8372H4.32629C4.66019 11.8372 4.93095 11.5703 4.93095 11.2407V7.48221H7.69456V11.2407C7.68976 11.5701 7.92867 11.8369 8.26258 11.8369H10.5587C10.8926 11.8369 11.1634 11.5701 11.1634 11.2405V5.94398C11.1634 5.94398 11.2781 6.04315 11.4197 6.16587C11.561 6.28835 11.8577 6.19014 12.0824 5.94614L12.2399 5.77539Z' fill='" + #{str-replace(#{$color}, '#', '%23')} + "'/%3E%3C/svg%3E%0A");
+          background-repeat: no-repeat;
+        }
+  
+        &:hover,
+        &:focus {
+          &::before {
+            $color: $main-accent-color;
+            background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2399 5.77539C12.4646 5.53163 12.4429 5.15801 12.1914 4.94111L6.65187 0.159738C6.40043 -0.0571627 5.99731 -0.052619 5.75117 0.169981L0.19278 5.19603C-0.053367 5.41863 -0.065448 5.79177 0.166032 6.02912L0.305389 6.17228C0.536586 6.40963 0.910291 6.43793 1.13955 6.2353L1.55495 5.86834V11.2407C1.55495 11.5703 1.82571 11.8372 2.15961 11.8372H4.32629C4.66019 11.8372 4.93095 11.5703 4.93095 11.2407V7.48221H7.69456V11.2407C7.68976 11.5701 7.92867 11.8369 8.26258 11.8369H10.5587C10.8926 11.8369 11.1634 11.5701 11.1634 11.2405V5.94398C11.1634 5.94398 11.2781 6.04315 11.4197 6.16587C11.561 6.28835 11.8577 6.19014 12.0824 5.94614L12.2399 5.77539Z' fill='" + #{str-replace(#{$color}, '#', '%23')} + "'/%3E%3C/svg%3E%0A");
+          }
+        }
+      }
+    }
+  
+    &.slick-active {
+      button:before {
+        opacity: 1;
+        color: $main-accent-color;
+      }
+  
+      &:first-child button:before {
+        $color: $main-accent-color;
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2399 5.77539C12.4646 5.53163 12.4429 5.15801 12.1914 4.94111L6.65187 0.159738C6.40043 -0.0571627 5.99731 -0.052619 5.75117 0.169981L0.19278 5.19603C-0.053367 5.41863 -0.065448 5.79177 0.166032 6.02912L0.305389 6.17228C0.536586 6.40963 0.910291 6.43793 1.13955 6.2353L1.55495 5.86834V11.2407C1.55495 11.5703 1.82571 11.8372 2.15961 11.8372H4.32629C4.66019 11.8372 4.93095 11.5703 4.93095 11.2407V7.48221H7.69456V11.2407C7.68976 11.5701 7.92867 11.8369 8.26258 11.8369H10.5587C10.8926 11.8369 11.1634 11.5701 11.1634 11.2405V5.94398C11.1634 5.94398 11.2781 6.04315 11.4197 6.16587C11.561 6.28835 11.8577 6.19014 12.0824 5.94614L12.2399 5.77539Z' fill='" + #{str-replace(#{$color}, '#', '%23')} + "'/%3E%3C/svg%3E%0A");
+      }
+    }
+  
+    &:not(:first-child) {
+      button {
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
     margin-bottom: 16px;
-    @media screen and (min-width: $medium) {        
-       margin-bottom: 32px;
-      } 
-}
+    @media screen and (min-width: $medium) {
+      margin-bottom: 32px;
+    }
+  }

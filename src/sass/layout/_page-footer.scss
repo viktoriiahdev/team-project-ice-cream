@@ -88,7 +88,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     color: #FEA5BB;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms $cubic;
     &:hover,
     &:focus {
         color: $main-accent-color;

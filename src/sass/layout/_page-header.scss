@@ -158,19 +158,19 @@
   }
 }
 .over {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba($color: #000000, $alpha: 0.2);
-  }
-  .header__nav {
-    transform: translateX(0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+}
+.header__nav {
+  transform: translateX(0);
 }
 .over.is-hidden0 {
   display: none;
-    @media screen and (min-width: $large) {
+  @media screen and (min-width: $large) {
     position: static;
     display: block;
     width: auto;

@@ -9,7 +9,7 @@ const closeModalBtn = document.querySelectorAll('[data-modal-close]');
 
 function openModal() {
   console.log(this);
-  modal = document.querySelector('[data-modal-' + this.dataset.source + ']');
+  modal = document.querySelector('[data-modal-' + this.dataset.content + ']');
   modal.classList.remove(modalHiddenClass);
   backdrop.classList.remove(backdropHiddenClass);
 }
@@ -48,7 +48,7 @@ images.forEach(img => {
 
 // відкривать зображення в модальному вікні
 function openImage() {
-  modal = document.querySelector('[data-modal-' + this.dataset.source + ']');
+  modal = document.querySelector('[data-modal-' + this.dataset.content + ']');
   modal.classList.remove(modalHiddenClass);
   backdrop.classList.remove(backdropHiddenClass);
   modalImg.src = this.src;

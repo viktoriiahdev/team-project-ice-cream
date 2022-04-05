@@ -5,8 +5,8 @@
   &--gallery {
     transform: scale(1);
 
-    max-width: 80%;
-    max-height: 80%;
+    width: 80vw;
+    height: 80vh;
     display: flex;
 
     transition: transform, opacity, visibility;
@@ -23,6 +23,7 @@
     }
   }
 
+  //закрите модальне вікно
   &--hidden {
     opacity: 0;
     visibility: hidden;

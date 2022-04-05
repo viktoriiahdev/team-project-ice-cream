@@ -89,9 +89,11 @@
     font-family: 'DM Sans';
    font-size: 8px;
     color: #FFFFFF;
+    margin-bottom: 7px;
     @media screen and (min-width:1200px) {
         font-size: 14px;
         line-height: 140%;
+        margin-bottom: 20px;
     }
    
 }
@@ -109,6 +111,7 @@
         left:227px;
         bottom: 84px;
         width: 200px;
+        
     }
 }
 .cafe-list {
@@ -118,8 +121,10 @@
 .cafe-list__item {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .cafe-list__text {
+   
     font-family: 'Titan One';
 font-size: 28px;
 line-height: 32px;
@@ -128,6 +133,7 @@ text-align: right;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #D41443;
+    z-index: 5;
     @media screen  and (min-width:1200px) {
         
         font-size: 46px;
@@ -211,6 +217,39 @@ width: 304px;
         left: 500px;
         
         
+    }
+
+}
+.arrow-wrap {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: #FFFFFF;
+    fill: $main-accent-color;
+    @media screen and (min-width:1200px) {
+        width: 26px;
+        height: 26px;
+        
+    }
+    
+   
+}
+.cafe-list__item::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    z-index: 4;
+}
+.hero-btn-list__link:hover {
+    .hero__btn {
+        background-color: #D41443;
+        color: #FFFFFF;
+     
     }
 
 }

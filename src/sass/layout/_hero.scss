@@ -87,25 +87,28 @@
 }
 .hero__text {
     font-family: 'DM Sans';
-    font-size: 8px;
-    line-height: 150%;
+   font-size: 8px;
     color: #FFFFFF;
-    
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 140%;
+    }
    
 }
 .hero__wrap {
     display: none;
      position: absolute;
-    width: 115px;
+    
     left: 167px;
     bottom: 56px;
     @media screen and (min-width:768px) {
         display: block;
-      
+    width: 115px;
     }
     @media screen and (min-width:1200px ) {
         left:227px;
         bottom: 84px;
+        width: 200px;
     }
 }
 .cafe-list {

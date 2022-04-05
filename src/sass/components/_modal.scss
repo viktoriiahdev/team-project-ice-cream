@@ -1,0 +1,32 @@
+.modal {
+  position: absolute;
+
+  // стилі для модального вікна - галерея
+  &--gallery {
+    transform: scale(1);
+
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+
+    transition: transform, opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .backdrop--is-hidden & {
+      transform: scale(1.1);
+    }
+
+    .modal__content {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  //закрите модальне вікно
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

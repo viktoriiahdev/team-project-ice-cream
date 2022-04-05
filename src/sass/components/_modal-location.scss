@@ -1,12 +1,12 @@
 .modal-location {
-  width: 250px;
-  height: 502px;
+  max-width: 90vw;
+  height: 50vh;
+  position: absolute;
+  border-radius: 20px;
   padding: 20px;
   margin: 0 auto;
-  border-radius: 22px;
   border: 1px solid #e17992;
   background-color: $main-bg-color;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -19,101 +19,9 @@
   @media screen and(min-width:$large) {
     width: 760px;
   }
-  &__close {
-    position: absolute;
-    top: 1vh;
-    right: 1vw;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: $main-bg-color;
-    color: $main-accent-color;
-  }
-  &__title {
-    margin-top: 30px;
-    margin-bottom: 70px;
-    @media screen and(min-width:$medium) {
-      margin-bottom: 50px;
-    }
-  }
-  &__field {
-    align-items: center;
-    margin-bottom: 70px;
-    color: $main-accent-color;
-    @media screen and(min-width:$medium) {
-      margin-left: 60px;
-    }
-  }
-  &__btn {
-    margin: auto;
-  }
-  /* The modal-buy__label*/
-  &__label {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    @media screen and(min-width:$medium) {
-      font-size: 24px;
-      margin-bottom: 14px;
-    }
-    @media screen and(min-width:$large) {
-      font-size: 26px;
-      margin-bottom: 16px;
-    }
-  }
-  &__label:hover,
-  &__label:focus {
-    color: rgba(212, 20, 67, 0.6);
-  }
+}
 
-  /* Hide the browser's default radio button */
-  &__label input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  /* Create a custom radio button */
-  &__checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: $main-bg-color;
-    border: 1px solid #e17992;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  /* When the radio button is checked, add a blue background */
-  &__label input:checked ~ &__checkmark {
-    background-color: $main-accent-color;
-  }
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  &__checkmark:after {
-    content: '';
-    position: absolute;
-    display: none;
-  }
-  /* Show the indicator (dot/circle) when checked */
-  &__label input:checked ~ &__checkmark:after {
-    display: block;
-  }
-  /* Style the indicator (dot/circle) */
-  &__label &__checkmark:after {
-    // top: 9px;
-    // left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
-  }
+.modale-map {
+  width: 200px;
+  min-height: 400px;
 }

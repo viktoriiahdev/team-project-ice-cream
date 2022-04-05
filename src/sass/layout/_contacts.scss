@@ -1,8 +1,5 @@
-.contacts{
-    background-image: linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
-    @media screen and (min-width: $small) {
-        background-image: linear-gradient(to top, $secondary-bg-color 75%, $main-bg-color 25%);
-    }
+.contacts {
+    background-image: linear-gradient(to top, $secondary-bg-color 75%, $main-bg-color 25%);
     @media screen and (min-width: $medium){
         background-image: linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
     }
@@ -11,105 +8,116 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
     font-weight: 500;
-    font-size: 16px;
     letter-spacing: 0.04em;
-    &__item{
-        padding: 40px;
-        background: $main-bg-color;
-        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-        border-radius: 24px;
-        @media screen and (min-width: $small) {
-            padding: 40px 32px;
-        }
-        @media screen and (min-width: $medium){
-            padding: 40px 32px;
-        }
-    }
-    &__city{
-        margin-top: 32px;
-        margin-bottom: 8px;
-        color: $maint-text-color-dark;
-        line-height: 1.86;
-        @media screen and (min-width: $small) {
-            margin-top: 20px;
-        }
-        @media screen and (min-width: $medium) {
-            margin-top: 32px;
-            margin-bottom: 12px;
-        }
-    }
-    &__descr,
-    &__tel,
-    &__mail{
-        color: $secondary-text-color;
-        line-height: 1.83;
-        @media screen and (min-width: $small){
-            display: block;
-        }
-        @media screen and (min-width: $medium){
-            display: block;
-        }
-    }
-    &__line{
-        border: 1px solid $border-color;
-        margin: 32px 0;
-        @media screen and (min-width: $small) {
-            margin: 24px 0;
-        }
-        @media screen and (min-width: $medium){
-            margin: 32px 0;
-        }
-    }
-    &__day{
-        color: $maint-text-color-dark;
-        line-height: 1.86;
-    }
-    &__time{
-        color: $secondary-accent-color-pink;
-        line-height: 1.86;
-    }
-    @media screen and (min-width: $small){
-        flex-wrap: wrap;
-        font-size: 12px;
-    }
     @media screen and (min-width: $medium) {
         flex-wrap: nowrap;
-        font-size: 14px;
+        gap: 30px;
+    }
+}
+.local__item {
+    background: $main-bg-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+    @media screen and (min-width: $large) {
+        padding: 40px;
     }
 }
 .local__place {
-    padding: 8px 16px;
+    padding: 0 25px;
+    font-size: 12px;
     line-height: 1.86;
     color: $maint-text-color-light;
     background-color: $secondary-accent-color-yellow;
     border-radius: 6px;
+    @media screen and (min-width: $medium) {
+        display: inline-block;
+        font-size: 16px;
+        padding: 0 16px;
+    }
     &--green{
         background-color: $secondary-accent-color-green;
     }
-    @media screen and (min-width: $small) {
-        padding: 4px 25px;
+}
+.local-top{
+    padding: 20px 0 24px;
+    border-bottom: 1px solid $border-color;
+    @media screen and (min-width: $medium) {
+        padding: 32px 0;
     }
+    &__city {
+        margin-bottom: 8px;
+        @media screen and (min-width: $medium){
+            margin-bottom: 12px;
+        }
+        @media screen and (min-width: $large) {
+            margin-bottom: 8px;
+        }
+    }
+    &__descr{
+        width: 179px;
+        @media screen and (min-width: $medium) {
+            width: 158px;
+        }
+        @media screen and (min-width: $large) {
+            width: 250px;
+        }
+    }
+}
+.local-schedule{
+    padding: 24px 0;
+    border-bottom: 1px solid $border-color;
     @media screen and (min-width: $medium){
-        padding: 8px 16px;
+        padding: 32px 0;
+    }
+}
+.local__text{
+    font-family: $dm-sans;
+    font-weight: 500;
+    font-size: 12px;
+    color: $secondary-text-color;
+    line-height: 1.5;
+    @media screen and (min-width: $medium) {
+        font-size: 14px;
+        line-height: 1.66;
+    }
+    
+    @media screen and (min-width: $large) {
+        font-size: 16px;
+        line-height: 1.83;
+    }
+    &--black {
+        color: $maint-text-color-dark;
+        line-height: 1.86;
+    }
+    &--pink {
+        color: $secondary-accent-color-pink;
+        line-height: 1.86;
+    }
+}
+.local-contacts{
+    padding-top: 24px;
+    @media screen and (min-width: $large) {
+        padding-top: 32px;
+    }
+    &-contacts__link {
+        display: block;
     }
 }
 
-.local-button{
+.local-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding-top: 60px;
-    @media screen and (min-width: $small) {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding-top: 32px;
-    }
-    @media screen and (min-width: $medium){
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 32px;
+    @media screen and (min-width: $large){
         flex-wrap: nowrap;
         gap: 15px;
-        padding-top: 40px;
+        padding-top: 60px;      
     }
 }

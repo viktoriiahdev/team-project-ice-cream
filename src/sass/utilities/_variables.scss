@@ -8,6 +8,9 @@ $secondary-text-color: #907e82;
 
 $main-bg-color: #ffffff;
 $secondary-bg-color: #fff5f6;
+$secondary-bg-color-pink: #ffb8ca;
+
+// modal bg
 $modal-bg-color: #e17992;
 
 // accent colors
@@ -21,3 +24,6 @@ $secondary-accent-color-green: #c2e297;
 
 // border colors
 $border-color: #e1e1e1;
+
+//transition-function
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);

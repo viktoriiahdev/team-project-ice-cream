@@ -1,0 +1,27 @@
+.modal-buy {
+  width: 90vw;
+  height: 581px;
+  padding: 40px;
+  margin: 0 auto;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%) scale(1);
+  background-color: #e17992;
+  &__close {
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

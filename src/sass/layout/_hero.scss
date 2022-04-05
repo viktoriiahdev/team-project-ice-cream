@@ -249,7 +249,8 @@ width: 304px;
     .hero__btn {
         background-color: #D41443;
         color: #FFFFFF;
-     
+  
+       transition: color background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 }

@@ -1,7 +1,7 @@
 .modal--about {
   overflow-x: hidden;
   position: absolute;
-  width: 95vw;
+  max-width: 700px;
   height: 95vh;
   scroll-behavior: auto;
   background-color: $secondary-bg-color;
@@ -15,9 +15,6 @@
   transition: transform 250ms $cubic;
   padding: 20px 40px;
   border-radius: 20px;
-  @media screen and (min-width: $medium) {
-    width: 75vw;
-  }
 }
 .about-modal__close-icon {
   width: 18px;
@@ -26,8 +23,7 @@
 .about-modal__close-btn {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  border: 1px solid $main-accent-color;
+
   background-color: transparent;
   position: absolute;
   top: 10px;
@@ -104,8 +100,7 @@
     transform: translateY(0);
   }
   @media screen and (min-width: $medium) {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 13px;
   }
   @media screen and (min-width: $large) {
     font-size: 20px;

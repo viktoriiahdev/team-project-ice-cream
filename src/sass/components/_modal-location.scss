@@ -1,6 +1,6 @@
 .modal-location {
-  max-width: 90vw;
-  height: 80vh;
+  width: 250px;
+  min-height: 400px;
   position: absolute;
   border-radius: 20px;
   padding: 20px;
@@ -11,15 +11,18 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and(min-width:480px) {
+    width: 460px;
+    height: 700px;
+  }
   @media screen and(min-width:$medium) {
-    width: 550px;
+    width: 700px;
     height: 700px;
   }
   @media screen and(min-width:$large) {
-    width: 760px;
+    width: 900px;
+    height: 850px;
   }
 }
 
@@ -30,11 +33,16 @@
   border: none;
   width: 200px;
   min-height: 400px;
-  @media screen and(min-width:$medium) {
-    width: 500px;
+  @media screen and(min-width:480px) {
+    width: 410px;
+    height: 500px;
   }
-}
-
-.modal-container {
-  display: block;
+  @media screen and(min-width:$medium) {
+    width: 650px;
+    height: 500px;
+  }
+  @media screen and(min-width:$large) {
+    width: 850px;
+    height: 650px;
+  }
 }

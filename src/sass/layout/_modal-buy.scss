@@ -3,6 +3,8 @@
   height: 502px;
   padding: 20px;
   margin: 0 auto;
+  border-radius: 22px;
+  border: 1px solid #e17992;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10,13 +12,14 @@
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: $modal-bg-color;
+  background-color: $main-bg-color;
   &__close {
     position: absolute;
     top: 1vh;
     right: 1vw;
     width: 30px;
     height: 30px;
+    border-radius: 50%;
     background-color: $modal-bg-color;
     color: $main-bg-color;
   }
@@ -26,7 +29,7 @@
   }
   &__field {
     margin-bottom: 70px;
-    color: $maint-text-color-light;
+    color: $main-accent-color;
   }
   &__btn {
     margin: auto;
@@ -58,7 +61,11 @@
     height: 25px;
     width: 25px;
     background-color: $main-bg-color;
+    border: 1px solid #e17992;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   /* When the radio button is checked, add a blue background */
   &__label input:checked ~ &__checkmark {
@@ -76,11 +83,14 @@
   }
   /* Style the indicator (dot/circle) */
   &__label &__checkmark:after {
-    top: 9px;
-    left: 9px;
+    // top: 9px;
+    // left: 9px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: white;
+  }
+  &__icon {
+    padding-top: 2px;
   }
 }

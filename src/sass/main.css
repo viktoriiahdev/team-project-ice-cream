@@ -1038,7 +1038,7 @@ a {
 }
 
 .local__text--pink {
-  color: #68434c;
+  color: #FFA5BA;
   line-height: 1.86;
 }
 
@@ -1052,8 +1052,18 @@ a {
   }
 }
 
-.local-contacts-contacts__link {
+.local-contacts__link {
   display: block;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.local-contacts__link:hover, .local-contacts__link:focus {
+  color: #68434c;
 }
 
 .local-button {

@@ -1,0 +1,57 @@
+.franchise-modal {
+    background-color: #E17992;
+}
+.franchise-modal__close-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        fill: $main-accent-color;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+.franchise-modal__icon {
+    fill: #FFFFFF;
+}
+.franchise-modal__title {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #D41443;
+}
+.franchise-modal__text {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.franchise-modal__second-text { 
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #907E82;
+}
+// .franchise-modal__form {
+//     margin-bottom: 10px;
+// }

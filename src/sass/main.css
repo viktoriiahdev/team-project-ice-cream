@@ -192,9 +192,11 @@ a {
 .section__title {
   font-family: "Titan One", cursive;
   font-weight: 400;
+  
   font-size: 34px;
   line-height: 1.147;
   letter-spacing: 0.04em;
+  
   text-align: center;
   text-transform: uppercase;
   color: #d41443;
@@ -1111,6 +1113,49 @@ a {
   }
 }
 
+<<<<<<< HEAD
+.hero {
+  padding-top: 194px;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  width: 218px;
+  color: #FFFFFF;
+}
+
+.hero-btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 190px;
+}
+
+.hero-btn-list__item {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .cafe-list {
+    display: none;
+  }
+}
+
+.hero__text {
+  width: 115px;
+  font-size: 8px;
+  line-height: 150%;
+  color: #FFFFFF;
+
+.about {
+=======
 .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1124,6 +1169,7 @@ a {
 }
 
 .advantages {
+>>>>>>> main
   background-color: #fff5f6;
 }
 

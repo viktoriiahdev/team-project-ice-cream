@@ -29,7 +29,31 @@
     justify-content: center;
     cursor: pointer;
 }
+.franchise__icon {
+width: 10px;
+height: 10px;
+opacity: 0.6;
+transition: opacity 250ms $cubic;
 
+&:hover {
+    opacity: 1;
+}
+
+@media screen and(min-width:480px) {
+    width: 13px;
+    height: 13px;
+}
+
+@media screen and(min-width:$medium) {
+    width: 18px;
+    height: 18px;
+}
+
+@media screen and(min-width:$large) {
+    width: 25px;
+    height: 25px;
+}
+}
 .franchise__title {
     font-family: $titan-one;
     font-style: normal;

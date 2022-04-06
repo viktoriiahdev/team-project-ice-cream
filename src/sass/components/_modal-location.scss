@@ -29,8 +29,8 @@
     height: 700px;
   }
   @media screen and(min-width:$medium) {
-    width: 700px;
-    height: 600px;
+    width: 750px;
+    height: 550px;
   }
   @media screen and(min-width:$large) {
     width: 1100px;
@@ -44,19 +44,19 @@
   display: block;
   border: 1px solid #e17992;
   border-radius: 20px;
-  width: 180px;
+  width: 185px;
   min-height: 250px;
   @media screen and(min-width:480px) {
-    width: 380px;
-    height: 520px;
+    width: 395px;
+    height: 580px;
   }
   @media screen and(min-width:$medium) {
-    width: 630px;
+    width: 685px;
     height: 400px;
   }
   @media screen and(min-width:$large) {
-    width: 1020px;
-    height: 600px;
+    width: 1035px;
+    height: 645px;
   }
 }
 

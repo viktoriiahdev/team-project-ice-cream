@@ -15,8 +15,8 @@
 }
 
 .franchise__close-button {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     fill: $main-accent-color-darker;
     background: transparent;
     position: absolute;
@@ -28,6 +28,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    @media screen and(min-width:$medium) {
+        width: 40px;
+        height: 40px;
+    }
 }
 .franchise__icon {
     width: 100%;

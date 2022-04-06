@@ -18,11 +18,23 @@
     position: absolute;
     top: 1vh;
     right: 1vh;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: $main-bg-color;
     color: $main-accent-color;
+    @media screen and(min-width:480px) {
+      width: 18px;
+      height: 18px;
+    }
+    @media screen and(min-width:$medium) {
+      width: 25px;
+      height: 25px;
+    }
+    @media screen and(min-width:$large) {
+      width: 30px;
+      height: 30px;
+    }
   }
   @media screen and(min-width:480px) {
     width: 460px;
@@ -90,6 +102,18 @@
 }
 
 .modal-location__icon {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
+  @media screen and(min-width:480px) {
+    width: 12px;
+    height: 12px;
+  }
+  @media screen and(min-width:$medium) {
+    width: 16px;
+    height: 16px;
+  }
+  @media screen and(min-width:$large) {
+    width: 20px;
+    height: 20px;
+  }
 }

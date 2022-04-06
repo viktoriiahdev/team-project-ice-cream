@@ -1,0 +1,165 @@
+.modal--franchise {
+    background-color: $main-bg-color;
+    border: 1px solid $main-accent-color;
+    max-width: 90vw;
+    position: absolute;
+    border-radius: 20px;
+    padding: 36px;
+    
+    @media screen and (min-width: $medium) {
+        width: 450px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0) scale(1);
+    }
+}
+
+.franchise__close-button {
+    width: 15px;
+    height: 15px;
+    fill: $main-accent-color-darker;
+    background: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @media screen and(min-width:$medium) {
+        width: 30px;
+        height: 30px;
+    }
+}
+.franchise__icon {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    transition: opacity 250ms $cubic;
+    
+    &:hover {
+        opacity: 1;
+    }
+}
+.franchise__title {
+    font-family: $titan-one;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.14;
+    font-size: 34px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $main-accent-color;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $medium) {
+        font-size: 34px;
+        line-height: 1.14;
+    }
+}
+
+.franchise__text {
+    font-family: $dm-sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.28;
+    text-transform: capitalize;
+    text-align: center;
+    color: $secondary-accent-color-pink;
+    margin-bottom: 5px;
+
+    @media screen and (min-width: $medium) {
+        font-size: 14px;
+        line-height: 1.28;
+    }
+}
+
+.franchise__second-text {
+    font-family: $dm-sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: $secondary-text-color;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $medium) {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+.franchise__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.31;
+    color: $main-accent-color;
+
+    @media screen and (min-width: $medium) {
+        font-size: 16px;
+        line-height: 1.31;
+    }
+}
+
+.franchise__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $main-accent-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 42px;
+    margin-top: 6px;
+    margin-top: 10px;
+
+    &:focus {
+        border-color: var(--accent-color);
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @media screen and (min-width: $medium) {
+        margin-top: 10px;
+    }
+}
+
+.franchise__btn {
+    font-family: $dm-sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.31;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $maint-text-color-light;
+    background: $main-accent-color;
+    border-radius: 22px;
+    cursor: pointer;
+    min-width: 90px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $medium) {
+        font-size: 16px;
+        line-height: 1.31;
+        padding: 10px 25px;
+    }
+}

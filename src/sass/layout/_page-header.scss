@@ -63,7 +63,7 @@
   color: $maint-text-color-light;
   background: $modal-bg-color;
   transform: translateX(0);
-
+  transition: transform 250ms linear;
 
   @media screen and (min-width: $medium) {
     height: 100vh;
@@ -160,14 +160,13 @@
   background-color: rgba($color: #000000, $alpha: 0.2);
   opacity: 1;
   transition: opacity 250ms linear, visibility 250ms linear;
-
 }
 
 .over.is-hidden0 {
   opacity: 0;
   visibility: hidden;
- 
-   .header__nav {
+
+  .header__nav {
     transform: translateX(100%);
     transition: transform 250s linear;
   }
@@ -179,4 +178,3 @@
     background-color: transparent;
   }
 }
-

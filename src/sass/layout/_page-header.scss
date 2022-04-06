@@ -83,17 +83,26 @@
     width: auto;
   }
 }
-.modal__close {
+.header__mb-btn {
   position: absolute;
+  background: transparent;
   right: 20px;
-  top: 20px;
-
-  fill: $main-bg-color;
+  top: 32px;
+  color: currentColor;
 }
 .header__mb-btn {
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+  }
   @media screen and (min-width: $large) {
     display: none;
   }
+}
+.header__menu-svg {
+  fill: $main-accent-color;
+  height: 20px;
+  width: 12px;
 }
 
 .header__menu-btn {
@@ -108,15 +117,11 @@
     display: none;
   }
 }
-.header__menu-svg {
-  fill: $main-accent-color;
-  height: 20px;
-  width: 12px;
-}
+
 .header__btn-mb {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 26px;
+  margin-top: 60px;
   margin-bottom: 32px;
   @media screen and (min-width: $large) {
     display: none;

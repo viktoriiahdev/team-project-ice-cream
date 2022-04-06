@@ -471,17 +471,28 @@ a {
   }
 }
 
-.modal__close {
+.header__mb-btn {
   position: absolute;
+  background: transparent;
   right: 20px;
-  top: 20px;
-  fill: #ffffff;
+  top: 32px;
+  color: currentColor;
+}
+
+.header__mb-btn:hover, .header__mb-btn:focus {
+  color: #d41443;
 }
 
 @media screen and (min-width: 1200px) {
   .header__mb-btn {
     display: none;
   }
+}
+
+.header__menu-svg {
+  fill: #d41443;
+  height: 20px;
+  width: 12px;
 }
 
 .header__menu-btn {
@@ -502,16 +513,10 @@ a {
   }
 }
 
-.header__menu-svg {
-  fill: #d41443;
-  height: 20px;
-  width: 12px;
-}
-
 .header__btn-mb {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 26px;
+  margin-top: 60px;
   margin-bottom: 32px;
 }
 

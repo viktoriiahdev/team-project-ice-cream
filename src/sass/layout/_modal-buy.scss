@@ -18,6 +18,8 @@
   }
   @media screen and(min-width:$large) {
     width: 760px;
+    height: auto;
+    max-height: 98vh;
   }
   &__close {
     position: absolute;
@@ -35,17 +37,28 @@
     @media screen and(min-width:$medium) {
       margin-bottom: 50px;
     }
+    @media screen and(min-width:$large) {
+      margin-bottom: 30px;
+    }
   }
   &__field {
     align-items: center;
     margin-bottom: 70px;
-    color: $main-accent-color;
+    //color: rgba(212, 20, 67, 0.6);
     @media screen and(min-width:$medium) {
       margin-left: 60px;
+    }
+    @media screen and(min-width:$large) {
+      display: flex;
+      margin-bottom: 10px;
+      margin-left: 0;
     }
   }
   &__btn {
     margin: auto;
+    @media screen and(min-width:$large) {
+      margin-bottom: 30px;
+    }
   }
   /* The modal-buy__label*/
   &__label {
@@ -66,11 +79,17 @@
     @media screen and(min-width:$large) {
       font-size: 26px;
       margin-bottom: 16px;
+      padding: 0;
+      text-align: center;
     }
   }
   &__label:hover,
   &__label:focus {
-    color: rgba(212, 20, 67, 0.6);
+    [class*='img'],
+    span {
+      color: $main-accent-color;
+      opacity: 1;
+    }
   }
 
   /* Hide the browser's default radio button */
@@ -92,10 +111,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and(min-width:$large) {
+      display: none;
+    }
   }
-  /* When the radio button is checked, add a blue background */
+  /* When the radio button is checked, add a  background */
   &__label input:checked ~ &__checkmark {
     background-color: $main-accent-color;
+    color: $main-accent-color;
+    opacity: 1;
+  }
+  &__label input:checked ~ &__img {
+    opacity: 1;
   }
   /* Create the indicator (the dot/circle - hidden when not checked) */
   &__checkmark:after {
@@ -115,5 +142,26 @@
     height: 8px;
     border-radius: 50%;
     background: white;
+  }
+  &__img {
+    display: none;
+    opacity: 0.5;
+    @media screen and(min-width:$large) {
+      display: flex;
+    }
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+span {
+  color: $main-accent-color;
+  opacity: 0.5;
+}
+input:checked {
+  & ~ [class*='img'],
+  & ~ span {
+    opacity: 1;
   }
 }

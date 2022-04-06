@@ -104,6 +104,10 @@
 .modal-location__icon {
   width: 10px;
   height: 10px;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
   @media screen and(min-width:480px) {
     width: 13px;
     height: 13px;
@@ -116,4 +120,5 @@
     width: 25px;
     height: 25px;
   }
+  transition: opacity 250ms $cubic;
 }

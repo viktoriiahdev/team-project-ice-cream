@@ -573,7 +573,9 @@ a {
 
 @media screen and (min-width: 768px) {
   .header__btn-mb2 {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

@@ -160,7 +160,7 @@
 .header__btn-mb2 {
   display: none;
   @media screen and (min-width: $medium) {
-    display: block;
+    display: flex;
   }
 }
 .over {

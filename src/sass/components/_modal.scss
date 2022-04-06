@@ -1,0 +1,67 @@
+.modal {
+  position: absolute;
+
+  // стилі для модального вікна - галерея
+  &--gallery {
+    transform: scale(1);
+
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+
+    transition: transform, opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .backdrop--is-hidden & {
+      transform: scale(1.1);
+    }
+
+    .modal__content {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  //закрите модальне вікно
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  top: -30px;
+  right: 0;
+
+  background-color: transparent;
+  border-radius: 50%;
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: $maint-text-color-light;
+  cursor: pointer;
+  transition: color 250ms $cubic, border-color 250ms $cubic;
+  opacity: 0.7;
+
+  @media screen and (min-width: $medium) {
+    top: 0;
+    right: auto;
+    left: calc(100% + 8px);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}

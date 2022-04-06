@@ -32,10 +32,11 @@ backdrop.addEventListener('click', closeModal);
 
 //не закривать при кліку на модальному вікні
 modalContent.forEach(el => {
-  el.onclick = function (event) {
-    console.log(this);
-    event.stopPropagation();
-  };
+  if (!el.classList.contains('modal--gallery'))
+    el.onclick = function (event) {
+      console.log(this);
+      event.stopPropagation();
+    };
 });
 
 // modal gallery

@@ -43,6 +43,8 @@
   transform-origin: center;
   transition: transform 250ms linear;
 
+  cursor: pointer;
+
   &:hover {
     &:not(.shift-y) {
       transform: scale(1.05);
@@ -129,4 +131,8 @@
 .gallery__image {
   height: 100%;
   object-fit: cover;
+
+  &--top-right {
+    object-position: top right;
+  }
 }

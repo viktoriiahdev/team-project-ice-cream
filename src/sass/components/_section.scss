@@ -1,5 +1,13 @@
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
+
+  @media screen and (min-width: $medium) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $large) {
+    padding-top: 60px;
+  }
 }
 
 .section__title {

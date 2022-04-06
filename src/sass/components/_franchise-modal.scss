@@ -2,7 +2,7 @@
     max-width: 90vh;
     position: absolute;
     border-radius: 20px;
-    padding: 40px;
+    padding: 36px;
     @media screen and (min-width: 768px) {
         width: 450px;
         top: 50%;
@@ -10,12 +10,12 @@
         transform: translate(-50%, -50%) rotate(0) scale(1);
     }
     @media screen and (min-width: 1200px) {
-        width: 528px;
-        min-height: 581px;
-        height: 50vw;
-        position: relative;
-        border-radius: 20px;
-        padding: 40px;
+        // width: 528px;
+        // min-height: 581px;
+        // height: 50vw;
+        // position: relative;
+        // border-radius: 20px;
+        // padding: 40px;
     }
 }
     .franchise-modal {

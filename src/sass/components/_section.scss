@@ -14,7 +14,9 @@
   text-transform: uppercase;
 
   color: $main-accent-color;
-
+  &--location {
+    margin-bottom: 20px;
+  }
   @media screen and (min-width: $medium) {
     font-size: 48px;
     line-height: 1.145;

@@ -9,32 +9,35 @@
       margin-bottom: 60px;
     }
   }
-  background-image: url(../images/milk-wave_320.png);
-  background-repeat: no-repeat;
-  background-position: center 75%;
-  background-size: contain;
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/milk-wave_320@2x.png);
-  }
-  @media screen and(min-width:$medium) {
-    background-image: url(../images/milk-wave_768.png);
+  .container {
+    background-image: url(../images/milk-wave_320.png);
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-size: contain;
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/milk-wave_768@2x.png);
+      background-image: url(../images/milk-wave_320@2x.png);
     }
-  }
-  @media screen and(min-width:$large) {
-    background-image: url(../images/milk-wave_1200.png);
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/milk-wave_1200@2x.png);
+    @media screen and(min-width:$medium) {
+      background-image: url(../images/milk-wave_768.png);
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/milk-wave_768@2x.png);
+      }
+    }
+    @media screen and(min-width:$large) {
+      background-image: url(../images/milk-wave_1200.png);
+      background-position: center 95%;
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/milk-wave_1200@2x.png);
+      }
     }
   }
 }

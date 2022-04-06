@@ -9,14 +9,6 @@
         left: 50%;
         transform: translate(-50%, -50%) rotate(0) scale(1);
     }
-    // @media screen and (min-width: 1200px) {
-    //     width: 528px;
-    //     min-height: 581px;
-    //     height: 50vw;
-    //     position: relative;
-    //     border-radius: 20px;
-    //     padding: 40px;
-    // }
 }
     .franchise-modal {
     background-color: $main-bg-color;
@@ -38,16 +30,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
-    // &:hover,
-    // &:focus {
-    //     fill: $secondary-accent-color-pink;
-    //     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    // }
 }
-// .franchise-modal__icon {
-//     fill: #FFFFFF;
-// }
+
 .franchise-modal__title {
     font-family: $titan-one;
     font-style: normal;

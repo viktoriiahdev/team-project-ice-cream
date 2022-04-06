@@ -29,8 +29,8 @@
     justify-content: center;
     cursor: pointer;
     @media screen and(min-width:$medium) {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 }
 .franchise__icon {
@@ -42,10 +42,6 @@
     &:hover {
         opacity: 1;
     }
-@media screen and (min-width: $medium) {
-    width: 25px;
-    height: 25px;
-}
 }
 .franchise__title {
     font-family: $titan-one;

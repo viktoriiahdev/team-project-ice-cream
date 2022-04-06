@@ -1,5 +1,5 @@
 .modal {
-    max-width: 90vh;
+    max-width: 90vw;
     position: absolute;
     border-radius: 20px;
     padding: 36px;
@@ -9,14 +9,14 @@
         left: 50%;
         transform: translate(-50%, -50%) rotate(0) scale(1);
     }
-    @media screen and (min-width: 1200px) {
-        // width: 528px;
-        // min-height: 581px;
-        // height: 50vw;
-        // position: relative;
-        // border-radius: 20px;
-        // padding: 40px;
-    }
+    // @media screen and (min-width: 1200px) {
+    //     width: 528px;
+    //     min-height: 581px;
+    //     height: 50vw;
+    //     position: relative;
+    //     border-radius: 20px;
+    //     padding: 40px;
+    // }
 }
     .franchise-modal {
     background-color: $main-bg-color;

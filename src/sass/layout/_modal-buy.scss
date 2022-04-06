@@ -85,8 +85,11 @@
   }
   &__label:hover,
   &__label:focus {
-    color: $main-accent-color;
-    opacity: 1;
+    [class*='img'],
+    span {
+      color: $main-accent-color;
+      opacity: 1;
+    }
   }
 
   /* Hide the browser's default radio button */
@@ -116,6 +119,7 @@
   &__label input:checked ~ &__checkmark {
     background-color: $main-accent-color;
     color: $main-accent-color;
+    opacity: 1;
   }
   &__label input:checked ~ &__img {
     opacity: 1;
@@ -149,5 +153,15 @@
     &:focus {
       opacity: 1;
     }
+  }
+}
+span {
+  color: $main-accent-color;
+  opacity: 0.5;
+}
+input:checked {
+  & ~ [class*='img'],
+  & ~ span {
+    opacity: 1;
   }
 }

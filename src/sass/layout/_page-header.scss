@@ -13,17 +13,20 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 8px;
+  padding-top: 8px;
   justify-content: space-between;
   align-items: center;
-  
+
   @media screen and (min-width: $medium) {
     justify-content: flex-end;
     padding-top: 32px;
+    padding-bottom: 32px;
   }
   @media screen and (min-width: $large) {
-    justify-content: space-between;
     padding-top: 37px;
+    padding-bottom: 37px;
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 .modal__close {
@@ -65,7 +68,6 @@
   background: $modal-bg-color;
   transform: translateX(0);
   transition: transform 250ms linear;
-  border: 1px solid #e18298;
 
   @media screen and (min-width: $medium) {
     height: 100vh;
@@ -129,14 +131,13 @@
 .header__nav-link {
   color: $main-bg-color;
   padding-left: 20px;
-  color: #000000;
   &:hover,
   &:focus {
     color: $main-accent-color;
   }
-    @media screen and (min-width: $large) {
-      padding: 0;
-    }
+  @media screen and (min-width: $large) {
+    padding: 0;
+  }
 }
 .header__nav-item {
   border: 1px solid #e18298;
@@ -147,16 +148,17 @@
     margin-bottom: 0;
     padding: 0;
     border: none;
+    width: auto;
   }
 }
 .header__nav-item:not(:last-child) {
   @media screen and (min-width: $large) {
-    margin-bottom: 0;
+    margin-right: 35px;
   }
 }
 
 .header__btn-mb2 {
-  //display: none;
+  display: none;
   @media screen and (min-width: $medium) {
     display: block;
   }
@@ -170,19 +172,18 @@
   background-color: rgba($color: #000000, $alpha: 0.2);
   opacity: 1;
   transition: opacity 250ms linear, visibility 250ms linear;
+
   @media screen and (min-width: $large) {
-    display: none;
+    display: block;
   }
 }
 
 .over.is-hidden0 {
   opacity: 0;
   visibility: hidden;
-
+  margin-right: 0;
   .header__nav {
-    @media screen and (min-width: $small) and (min-width: $medium) {
-      transform: translateX(100%);
-    }
+    transform: translateX(100%);
   }
   @media screen and (min-width: $large) {
     opacity: 1;
@@ -191,7 +192,8 @@
     height: auto;
     background-color: transparent;
     display: flex;
-    .header__nav{
+    width: auto;
+    .header__nav {
       transform: none;
     }
   }

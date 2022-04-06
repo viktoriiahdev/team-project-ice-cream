@@ -43,6 +43,10 @@
     @media screen and(min-width:$medium) {
       margin-left: 60px;
     }
+    @media screen and(min-width:$large) {
+      display: flex;
+      margin-bottom: 10px;
+    }
   }
   &__btn {
     margin: auto;
@@ -96,6 +100,7 @@
   /* When the radio button is checked, add a blue background */
   &__label input:checked ~ &__checkmark {
     background-color: $main-accent-color;
+    color: rgba(212, 20, 67, 0.6);
   }
   /* Create the indicator (the dot/circle - hidden when not checked) */
   &__checkmark:after {
@@ -115,5 +120,11 @@
     height: 8px;
     border-radius: 50%;
     background: white;
+  }
+  &__img {
+    display: none;
+    @media screen and(min-width:$large) {
+      display: flex;
+    }
   }
 }

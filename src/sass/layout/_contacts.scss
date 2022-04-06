@@ -1,8 +1,24 @@
 .contacts {
     background-image: linear-gradient(to top, $secondary-bg-color 75%, $main-bg-color 25%);
 
-    @media screen and (min-width: $medium) {
+    @media screen and(min-width:$medium) {
         background-image: linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+    }
+
+    @media screen and(min-width:$large) {
+        width: 100%;
+        min-height: 382px;
+        background-image: url(../images/cont_drops_1200.png), linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center 50%;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/cont_drops_1200@2x.png),
+                linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+        }
     }
 }
 
@@ -118,7 +134,7 @@
     }
 
     &--pink {
-        color: #FFA5BA;
+        color: $secondary-accent-color-pink;
         line-height: 1.86;
     }
 }
@@ -130,15 +146,19 @@
         padding-top: 32px;
     }
 }
+
 .local-contacts__link {
     display: block;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: $cubic;
-    &:hover, &:focus{
+
+    &:hover,
+    &:focus {
         color: $secondary-accent-color-pink;
     }
 }
+
 .local-button {
     display: flex;
     justify-content: center;

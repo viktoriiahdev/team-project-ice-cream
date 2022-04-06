@@ -18,22 +18,22 @@
     position: absolute;
     top: 1vh;
     right: 1vh;
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: $main-bg-color;
     color: $main-accent-color;
     @media screen and(min-width:480px) {
-      width: 18px;
-      height: 18px;
+      width: 35px;
+      height: 35px;
     }
     @media screen and(min-width:$medium) {
-      width: 25px;
-      height: 25px;
+      width: 40px;
+      height: 40px;
     }
     @media screen and(min-width:$large) {
-      width: 30px;
-      height: 30px;
+      width: 45px;
+      height: 45px;
     }
   }
   @media screen and(min-width:480px) {
@@ -105,15 +105,15 @@
   width: 10px;
   height: 10px;
   @media screen and(min-width:480px) {
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
   }
   @media screen and(min-width:$medium) {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
   @media screen and(min-width:$large) {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
   }
 }

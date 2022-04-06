@@ -129,4 +129,8 @@
 .gallery__image {
   height: 100%;
   object-fit: cover;
+
+  &--top-right {
+    object-position: top right;
+  }
 }

@@ -15,7 +15,7 @@
   padding-top: 8px;
   justify-content: space-between;
   align-items: center;
-
+  
   @media screen and (min-width: $medium) {
     justify-content: flex-end;
     padding-top: 32px;
@@ -23,6 +23,7 @@
   @media screen and (min-width: $large) {
     justify-content: space-between;
     padding-top: 37px;
+    flex-wrap: nowrap;
   }
 }
 .modal__close {
@@ -55,7 +56,7 @@
 .header__nav {
   width: 250px;
   height: 502px;
-  padding: 20px;
+  padding-top: 20px;
   position: absolute;
   top: 0;
   right: 0;
@@ -64,6 +65,7 @@
   background: $modal-bg-color;
   transform: translateX(0);
   transition: transform 250ms linear;
+  border: 1px solid #e18298;
 
   @media screen and (min-width: $medium) {
     height: 100vh;
@@ -75,10 +77,8 @@
     position: static;
     height: auto;
     background: inherit;
-    flex-wrap: nowrap;
     padding: 0;
     width: auto;
-    transform: translateX(0);
   }
 }
 .modal__close {
@@ -123,24 +123,34 @@
 .header__nav-list {
   @media screen and (min-width: $large) {
     display: flex;
+    width: 100%;
   }
 }
 .header__nav-link {
   color: $main-bg-color;
+  padding-left: 20px;
+  color: #000000;
   &:hover,
   &:focus {
     color: $main-accent-color;
   }
+    @media screen and (min-width: $large) {
+      padding: 0;
+    }
 }
 .header__nav-item {
+  border: 1px solid #e18298;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  width: 100%;
   @media screen and (min-width: $large) {
     margin-bottom: 0;
+    padding: 0;
+    border: none;
   }
 }
 .header__nav-item:not(:last-child) {
-  margin-bottom: 22px;
   @media screen and (min-width: $large) {
-    margin-right: 35px;
     margin-bottom: 0;
   }
 }
@@ -160,6 +170,9 @@
   background-color: rgba($color: #000000, $alpha: 0.2);
   opacity: 1;
   transition: opacity 250ms linear, visibility 250ms linear;
+  @media screen and (min-width: $large) {
+    display: none;
+  }
 }
 
 .over.is-hidden0 {
@@ -167,14 +180,19 @@
   visibility: hidden;
 
   .header__nav {
-    transform: translateX(100%);
-    transition: transform 250s linear;
+    @media screen and (min-width: $small) and (min-width: $medium) {
+      transform: translateX(100%);
+    }
   }
   @media screen and (min-width: $large) {
+    opacity: 1;
+    visibility: visible;
     position: static;
-    display: block;
-    width: auto;
     height: auto;
     background-color: transparent;
+    display: flex;
+    .header__nav{
+      transform: none;
+    }
   }
 }

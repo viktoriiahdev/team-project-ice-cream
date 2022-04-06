@@ -1,9 +1,73 @@
-<h1 class="hero__title">ice cream made with <span class="section__title">passion</span></h1>
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__list-wrap">
+      <div class="hero__title-btn-wrap">
+        <h1 class="hero__title">
+          ice cream <br />
+          made with<br />
+          <span class="section__title">passion</span>
+        </h1>
 
-<button class="button button--main button--large">Main large</button>
-<button class="button button--accent">
-  Accent append
-  <svg class="icon button__icon button__icon--append">
-    <use></use>
-  </svg>
-</button>
+        <ul class="hero-btn-list">
+          <li class="hero-btn-list__item"><a href="#prod" class="hero-btn-list__link"><button class="button button--main hero__btn">Products</button></a></li></li>
+          <li><a href="#made" class="hero-btn-list__link"><button class=" button button--main hero__btn">How it’s made?</button></a></li>
+        </ul>
+      </div>
+      <div class="img-cafe-wrap">
+        <ul class="cafe-list">
+          <li class="cafe-list__item">
+            <span class="cafe-list__text">16</span>
+            <span class="cafe-list__description">cafes</span>
+          </li>
+          <li class="cafe-list__item">
+            <span class="cafe-list__text">23</span>
+            <span class="cafe-list__description">food trucks</span>
+          </li>
+        </ul>
+        <div class="hero__img-wrap-2">
+          <picture>
+            <source
+              srcset="images/tasty-pic_1200.png 1x, images/tasty-pic_1200@2x.png 2x"
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="images/tasty-pic_768.png 1x, images/tasty-pic_768@2x.png 2x"
+              media="(min-width:768px)"
+            />
+            <img src="images/tasty-pic_1200.png" alt="photo" />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wrap">
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+      <button class="arrow-wrap">
+        
+        <svg width="" height="" class="arrow-btn">
+          <use href="/images/icons.svg#arrow-right"></use>
+        </svg>
+     
+      </button>
+    </div>
+
+    <div class="hero__img-wrap">
+      <picture>
+        <source
+          srcset="images/jar-milk_1200.png 1x, images/jar-milk_1200@2x.png 2x"
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="images/jar-milk_768.png 1x, images/jar-milk_768@2x.png 2x"
+          media="(min-width:768px)"
+        />
+        <img src="images/jar-milk_1200.png" alt="photo" />
+      </picture>
+    </div>
+    <div>
+      <picture></picture>
+    </div>
+  </div>
+</section>

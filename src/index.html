@@ -46,10 +46,15 @@
       <include src="./partials/modal-buy.html"></include>
       <include src="./partials/modal-location.html"></include>
       <include src="./partials/about-modal.html"></include>
-      <div class="modal modal--gallery modal--hidden" class="modal" data-modal-gallery>
-        <img class="modal__content" data-modal-image />
-      </div>
 
+      <include src="./partials/modal-gallery.html"></include>
+
+      <div class="modal modal--hidden" data-modal-location>
+        <h2 class="section__title">Location modal</h2>
+        <button class="button button--large button--main" data-modal-close data-content="location">
+          Close
+        </button>
+      </div>
       <div class="modal modal--hidden" data-modal-buy>
         <h2 class="section__title">Buy modal</h2>
         <button class="button button--large button--main" data-modal-close data-content="buy">

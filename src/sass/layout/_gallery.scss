@@ -1,0 +1,132 @@
+.gallery {
+  position: relative;
+  background-image: linear-gradient(to bottom, $secondary-bg-color 44.9%, $main-bg-color 45%);
+}
+
+.gallery__grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  grid-template-columns: repeat(7, 40px);
+  grid-template-rows: repeat(3, 40px);
+  gap: 2px;
+
+  // @media screen and (min-width: 480px) {
+  //   grid-template-columns: repeat(7, 65px);
+  //   grid-template-rows: repeat(3, 65px);
+
+  //   gap: 6px;
+  // }
+
+  @media screen and (min-width: $medium) {
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+    gap: 4px;
+  }
+
+  @media screen and (min-width: $large) {
+    grid-template-columns: repeat(7, 140px);
+    grid-template-rows: repeat(3, 140px);
+
+    gap: 8px;
+  }
+}
+
+.gallery__item {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  transform-origin: center;
+  transition: transform 250ms linear;
+
+  &:hover {
+    &:not(.shift-y) {
+      transform: scale(1.05);
+    }
+  }
+
+  @media screen and (min-width: $medium) {
+    border-radius: 10px;
+  }
+
+  @media screen and (min-width: $large) {
+    border-radius: 20px;
+  }
+
+  &-1 {
+    align-self: center;
+    grid-row-start: 2;
+  }
+
+  &-2 {
+    grid-column-start: 2;
+  }
+
+  &-6 {
+    grid-column-start: 7;
+    grid-row-start: 2;
+  }
+
+  &-7 {
+    grid-row-start: 2;
+  }
+
+  &-8 {
+    grid-column-start: 5;
+  }
+
+  &-10 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+  }
+
+  &-1,
+  &-3,
+  &-6 {
+    align-self: flex-end;
+  }
+
+  &--large {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+
+    &:hover {
+      &:not(.shift-y) {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &.shift-y {
+    transform: translateY(50%);
+
+    &:hover {
+      transform: translateY(50%) scale(1.05);
+    }
+
+    &--large {
+      transform: translateY(calc(50% + 10px));
+
+      &:hover {
+        transform: translateY(calc(50% + 10px)) scale(1.05);
+      }
+    }
+
+    &--small {
+      transform: translateY(calc(27%));
+
+      &:hover {
+        transform: translateY(calc(27%)) scale(1.05);
+      }
+    }
+  }
+}
+
+.gallery__image {
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,7 +1,5 @@
 .button {
   font-family: $dm-sans;
-  font-weight: 700;
-
   display: flex;
   align-items: baseline;
   text-align: center;
@@ -14,6 +12,10 @@
 
   padding: 7px 14px;
 
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic;
+
   @media screen and (min-width: $large) {
     font-size: 14px;
     line-height: 1.285;
@@ -25,6 +27,8 @@
   }
 
   &--large {
+    font-weight: 700;
+
     font-size: 16px;
     line-height: 1.3125;
 

@@ -1,12 +1,27 @@
 <header class="page-header">
-  <div class="container">
-    <a class="logo"
-      >ICECREAM
+  <div class="container header__container">
+    <a class="logo">
       <svg class="logo__svg">
-        <use href=""></use>
-      </svg>
+        <use href="./images/icons.svg#logo"></use></svg>ICECREAM
     </a>
+
+    <button class="header__menu-btn">
+      <svg class="header__menu-svg">
+        <use href="./images/icons.svg#menu"></use>
+      </svg>
+    </button>
     <nav class="header__nav">
+      <button class="header__mb-btn">
+        <svg class="modal__close">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+      <button class="button button--large button--main header__btn-mb" data-modal-open data-content="buy">
+        Buy now
+        <svg class="icon button__icon button__icon--append">
+          <use herf=""></use>
+        </svg>
+      </button>
       <ul class="header__nav-list">
         <li class="header__nav-item"><a href="" class="header__nav-link">Home</a></li>
         <li class="header__nav-item"><a href="" class="header__nav-link">About us</a></li>
@@ -15,16 +30,5 @@
         <li class="header__nav-item"><a href="" class="header__nav-link">Contact</a></li>
       </ul>
     </nav>
-    <button class="button button--large button--main">
-      Buy now
-      <svg class="icon button__icon button__icon--append">
-        <use herf=""></use>
-      </svg>
-    </button>
-    <button class="header__modal-btn">
-      <svg class="header__modal-svg">
-        <use href=""></use>
-      </svg>
-    </button>
   </div>
 </header>

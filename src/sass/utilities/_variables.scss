@@ -10,8 +10,10 @@ $main-bg-color: #ffffff;
 $secondary-bg-color: #fff5f6;
 $secondary-bg-color-pink: #ffb8ca;
 
-// accent colors
+$modal-bg-color: #e17992;
 
+
+// accent colors
 $main-accent-color: #d41443;
 $main-accent-color-darker: #c7133e;
 
@@ -21,3 +23,6 @@ $secondary-accent-color-green: #c2e297;
 
 // border colors
 $border-color: #e1e1e1;
+
+//transition-function
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);

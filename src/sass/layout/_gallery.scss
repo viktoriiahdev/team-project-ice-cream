@@ -9,7 +9,7 @@
   justify-content: center;
 
   grid-template-columns: repeat(7, 40px);
-  grid-template-rows: repeat(3, 40px);
+  grid-template-rows: repeat(9, 12px);
   gap: 2px;
 
   // @media screen and (min-width: 480px) {
@@ -20,15 +20,15 @@
   // }
 
   @media screen and (min-width: $medium) {
-    grid-template-columns: repeat(7, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(7, 101px);
+    grid-template-rows: repeat(9, 31px);
 
     gap: 4px;
   }
 
   @media screen and (min-width: $large) {
-    grid-template-columns: repeat(7, 140px);
-    grid-template-rows: repeat(10, 41px);
+    grid-template-columns: repeat(7, 142px);
+    grid-template-rows: repeat(9, 42px);
 
     gap: 8px;
   }

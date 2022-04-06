@@ -12,12 +12,12 @@
     }
 }
 
-.franchise-modal {
+.modal-franchise {
     background-color: $main-bg-color;
     border: 1px solid $main-accent-color;
 }
 
-.franchise-modal__close-button {
+.modal-franchise__close-button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 
-.franchise-modal__title {
+.modal-franchise__title {
     font-family: $titan-one;
     font-style: normal;
     font-weight: 400;
@@ -55,7 +55,7 @@
     }
 }
 
-.franchise-modal__text {
+.modal-franchise__text {
     font-family: $dm-sans;
     font-style: normal;
     font-weight: 700;
@@ -72,7 +72,7 @@
     }
 }
 
-.franchise-modal__second-text {
+.modal-franchise__second-text {
     font-family: $dm-sans;
     font-style: normal;
     font-weight: 700;
@@ -88,18 +88,7 @@
     }
 }
 
-.franchise-modal__second-text {
-    font-family: $dm-sans;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    color: $secondary-text-color;
-    margin-bottom: 15px;
-}
-
-.franchise-modal__label {
+.modal-franchise__label {
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
@@ -116,7 +105,7 @@
     }
 }
 
-.franchise-modal__input {
+.modal-franchise__input {
     width: 100%;
     height: 40px;
     border: 1px solid $main-accent-color;
@@ -137,7 +126,7 @@
     }
 }
 
-.franchise-modal__btn {
+.modal-franchise__btn {
     font-family: $dm-sans;
     font-style: normal;
     font-weight: 700;

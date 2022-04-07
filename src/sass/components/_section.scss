@@ -1,13 +1,21 @@
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
+
+  @media screen and (min-width: $medium) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $large) {
+    padding-top: 60px;
+  }
 }
 
 .section__title {
   font-family: $titan-one;
   font-weight: 400;
- 
-  font-size: 48px;
-  line-height: 96.5%;
+
+  font-size: 34px;
+  line-height: 1.147;
   letter-spacing: 0.04em;
 
   text-align: center;
@@ -15,11 +23,13 @@
 
   color: $main-accent-color;
 
-  @media screen and (min-width: $medium) {
-  font-size: 34px;
-  line-height: 90.5%;
+  &--location {
+    margin-bottom: 20px;
+  }
 
-  letter-spacing: 0.04em;
+  @media screen and (min-width: $medium) {
+    font-size: 48px;
+    line-height: 1.145;
   }
 
   @media screen and (min-width: $large) {

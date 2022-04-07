@@ -13,23 +13,23 @@
 .section__title {
   font-family: $titan-one;
   font-weight: 400;
- 
-  font-size: 48px;
-  line-height: 96.5%;
+
+  font-size: 34px;
+  line-height: 1.147;
   letter-spacing: 0.04em;
 
   text-align: center;
   text-transform: uppercase;
 
   color: $main-accent-color;
+
   &--location {
     margin-bottom: 20px;
   }
-  @media screen and (min-width: $medium) {
-  font-size: 34px;
-  line-height: 90.5%;
 
-  letter-spacing: 0.04em;
+  @media screen and (min-width: $medium) {
+    font-size: 48px;
+    line-height: 1.145;
   }
 
   @media screen and (min-width: $large) {

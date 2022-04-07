@@ -9,7 +9,6 @@ const openModalBtn = document.querySelectorAll('[data-modal-open]');
 const closeModalBtn = document.querySelectorAll('[data-modal-close]');
 
 function openModal() {
-  console.log(this);
   modal = document.querySelector('[data-modal-' + this.dataset.content + ']');
   modal.classList.remove(modalHiddenClass);
   backdrop.classList.remove(backdropHiddenClass);
@@ -17,6 +16,7 @@ function openModal() {
 
 //закривать при кліку в будь-якому місці навколо модального вікна
 function closeModal() {
+  modal = document.querySelector('[data-modal-' + this.dataset.content + ']');
   backdrop.classList.add(backdropHiddenClass);
   if (!modal.classList.contains('modal--hidden')) {
     modalImg.removeAttribute('src');

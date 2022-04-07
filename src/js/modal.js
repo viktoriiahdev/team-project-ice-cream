@@ -1,3 +1,4 @@
+'use strict';
 const backdropHiddenClass = 'backdrop--is-hidden';
 const backdrop = document.querySelector('[data-backdrop]');
 

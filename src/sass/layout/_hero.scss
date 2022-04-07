@@ -125,8 +125,9 @@ letter-spacing: 0.04em;
     left: 167px;
     bottom: 56px;
     @media screen and (min-width:768px) {
-        display: block;
-    width: 115px;
+       display: flex;
+       flex-direction: column;
+       width: 115px;
     }
     @media screen and (min-width:1200px ) {
         left:227px;

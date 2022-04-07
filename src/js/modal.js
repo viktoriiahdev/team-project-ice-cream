@@ -19,10 +19,10 @@ function openModal() {
 //закривать при кліку в будь-якому місці навколо модального вікна
 function closeModal() {
   backdrop.classList.add(backdropHiddenClass);
+  modal.classList.add(modalHiddenClass);
   if (!modal.classList.contains('modal--hidden')) {
     modalImg.removeAttribute('src');
   }
-  modal.classList.add(modalHiddenClass);
 }
 
 openModalBtn.forEach(btn => {

@@ -180,14 +180,15 @@
       opacity: 1;
     }
   }
-}
-span {
-  color: $main-accent-color;
-  opacity: 0.5;
-}
-input:checked {
-  & ~ [class*='img'],
-  & ~ span {
-    opacity: 1;
+
+  span {
+    color: $main-accent-color;
+    opacity: 0.5;
+  }
+  input:checked {
+    & ~ [class*='img'],
+    & ~ span {
+      opacity: 1;
+    }
   }
 }

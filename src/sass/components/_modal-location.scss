@@ -1,0 +1,124 @@
+.modal-location {
+  width: 250px;
+  min-height: 300px;
+  max-height: 90vh;
+  overflow-y: scroll;
+  position: absolute;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 0 auto;
+  border: 1px solid #e17992;
+  background-color: $main-bg-color;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+
+  &__close {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $main-bg-color;
+    color: $main-accent-color;
+    @media screen and(min-width:480px) {
+      width: 35px;
+      height: 35px;
+    }
+    @media screen and(min-width:$medium) {
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and(min-width:$large) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  @media screen and(min-width:480px) {
+    width: 460px;
+    height: 700px;
+  }
+  @media screen and(min-width:$medium) {
+    width: 750px;
+    height: 550px;
+  }
+  @media screen and(min-width:$large) {
+    width: 1100px;
+    height: 805px;
+  }
+}
+
+.modal-map {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 1px solid #e17992;
+  border-radius: 20px;
+  width: 185px;
+  min-height: 250px;
+  @media screen and(min-width:480px) {
+    width: 395px;
+    height: 580px;
+  }
+  @media screen and(min-width:$medium) {
+    width: 685px;
+    height: 400px;
+  }
+  @media screen and(min-width:$large) {
+    width: 1035px;
+    height: 645px;
+  }
+}
+
+.modal-location--title {
+  font-family: $titan-one;
+  font-weight: 500;
+  color: $main-accent-color;
+  font-size: 16px;
+  line-height: 1.147;
+  letter-spacing: 0.04em;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+    line-height: 1.145;
+  }
+  @media screen and (min-width: $medium) {
+    font-size: 48px;
+    line-height: 1.145;
+  }
+
+  @media screen and (min-width: $large) {
+    font-size: 58px;
+    line-height: 1.138;
+    letter-spacing: 0.06em;
+  }
+}
+
+.modal-location__icon {
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+  @media screen and(min-width:480px) {
+    width: 13px;
+    height: 13px;
+  }
+  @media screen and(min-width:$medium) {
+    width: 18px;
+    height: 18px;
+  }
+  @media screen and(min-width:$large) {
+    width: 25px;
+    height: 25px;
+  }
+  transition: opacity 250ms $cubic;
+}

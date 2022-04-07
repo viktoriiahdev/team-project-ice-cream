@@ -1,34 +1,74 @@
-<header class="page-header">
+<header class="page-header" id="page-header">
   <div class="container header__container">
-    <a class="logo">
+    <a class="logo" href="">
       <svg class="logo__svg">
         <use href="./images/icons.svg#logo"></use></svg>ICECREAM
     </a>
 
-    <button class="header__menu-btn">
+    <button class="header__menu-btn" type="button" data-modal-open0>
       <svg class="header__menu-svg">
         <use href="./images/icons.svg#menu"></use>
       </svg>
     </button>
-    <nav class="header__nav">
-      <button class="header__mb-btn">
-        <svg class="modal__close">
-          <use href="./images/icons.svg#close"></use>
-        </svg>
-      </button>
-      <button class="button button--large button--main header__btn-mb" data-modal-open data-content="buy">
-        Buy now
-        <svg class="icon button__icon button__icon--append">
-          <use herf=""></use>
-        </svg>
-      </button>
-      <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="" class="header__nav-link">Home</a></li>
-        <li class="header__nav-item"><a href="" class="header__nav-link">About us</a></li>
-        <li class="header__nav-item"><a href="" class="header__nav-link">How it’s made?</a></li>
-        <li class="header__nav-item"><a href="" class="header__nav-link">Our products</a></li>
-        <li class="header__nav-item"><a href="" class="header__nav-link">Contact</a></li>
-      </ul>
-    </nav>
+
+    <div class="over is-hidden0" data-modal>
+      <nav class="header__nav">
+        <button class="header__mb-btn" type="button" data-modal-close0>
+          <svg class="modal__close icon">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <button
+          class="button button--large button--main header__btn-mb"
+          type="button"
+          data-modal-open
+          data-content="buy"
+        >
+          Buy now
+          <svg class="icon button__icon button__icon--append">
+            <use href="./images/icons.svg#chevron-right"></use>
+          </svg>
+        </button>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#hero" class="header__nav-link">Home</a></li>
+          <li class="header__nav-item"><a href="#about" class="header__nav-link">About us</a></li>
+          <li class="header__nav-item">
+            <a href="#advantages" class="header__nav-link">How it’s made?</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#products" class="header__nav-link">Our products</a>
+          </li>
+          <li class="header__nav-item"><a href="#contacts" class="header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button
+      class="button button--large button--main header__btn-mb2"
+      type="button"
+      data-modal-open
+      data-content="buy"
+    >
+      Buy now
+      <svg class="icon button__icon button__icon--append">
+        <use href="./images/icons.svg#chevron-right"></use>
+      </svg>
+    </button>
+
   </div>
 </header>
+<script>
+  (() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-modal-open0]'),
+      closeModalBtn: document.querySelector('[data-modal-close0]'),
+      modal: document.querySelector('[data-modal]'),
+    };
+
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden0');
+    }
+  })();
+</script>

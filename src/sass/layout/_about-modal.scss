@@ -1,0 +1,114 @@
+.modal--about {
+  overflow-x: hidden;
+  position: absolute;
+  max-width: 700px;
+  height: 95vh;
+  scroll-behavior: auto;
+  background-color: $secondary-bg-color;
+
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $cubic;
+  padding: 20px 40px;
+  border-radius: 20px;
+}
+.about-modal__close-icon {
+  width: 18px;
+  height: 18px;
+}
+.about-modal__close-btn {
+  width: 20px;
+  height: 20px;
+
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 250ms $cubic, background-color 250ms $cubic;
+  color: $main-accent-color;
+  &:focus,
+  &:hover {
+    color: $secondary-accent-color-pink;
+    border: none;
+    background-color: $main-accent-color;
+  }
+}
+.about-modal__title {
+  color: $main-accent-color;
+  margin-bottom: 20px;
+}
+.about-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about-modal__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about-modal__card-title {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $secondary-accent-color-pink;
+  @media screen and (min-width: $medium) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  @media screen and (min-width: $large) {
+    font-size: 24px;
+    line-height: 23px;
+  }
+}
+.about_modal__card {
+  display: block;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+.about-modal__card-thumb {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 20px;
+}
+.about-modal__overlay {
+  position: absolute;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  padding: 10px;
+  bottom: 0;
+  transform: translateY(101%);
+  transition: transform 250ms $cubic;
+
+  color: #ffffff;
+  background-color: $secondary-bg-color-pink;
+  .about_modal__card:hover &,
+  .about_modal__card:focus & {
+    transform: translateY(0);
+  }
+  @media screen and (min-width: $medium) {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  @media screen and (min-width: $large) {
+    font-size: 20px;
+    line-height: 1.85;
+  }
+}
+
+.about-modal__card-content {
+  padding-bottom: 15px;
+}

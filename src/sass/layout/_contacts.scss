@@ -1,0 +1,175 @@
+.contacts {
+    background-image: linear-gradient(to top, $secondary-bg-color 75%, $main-bg-color 25%);
+
+    @media screen and(min-width:$medium) {
+        background-image: linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+    }
+
+    @media screen and(min-width:$large) {
+        width: 100%;
+        min-height: 382px;
+        background-image: url(../images/cont_drops_1200.png), linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center 50%;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/cont_drops_1200@2x.png),
+                linear-gradient(to top, $secondary-bg-color 80%, $main-bg-color 20%);
+        }
+    }
+}
+
+.local {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (min-width: $medium) {
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+}
+
+.local__item {
+    background: $main-bg-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+    flex: 1;
+
+    @media screen and (min-width: $large) {
+        padding: 40px;
+    }
+}
+
+.local__place {
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.86;
+    color: $maint-text-color-light;
+    background-color: $secondary-accent-color-yellow;
+    border-radius: 6px;
+
+    @media screen and (min-width: $medium) {
+        display: inline-block;
+        font-size: 16px;
+        padding: 0 16px;
+    }
+
+    &--green {
+        background-color: $secondary-accent-color-green;
+    }
+}
+
+.local-top {
+    padding: 20px 0 24px;
+    border-bottom: 1px solid $border-color;
+
+    @media screen and (min-width: $medium) {
+        padding: 32px 0;
+    }
+
+    &__city {
+        margin-bottom: 8px;
+
+        @media screen and (min-width: $medium) {
+            margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: $large) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__descr {
+        width: 179px;
+
+        @media screen and (min-width: $medium) {
+            width: 158px;
+        }
+
+        @media screen and (min-width: $large) {
+            width: 250px;
+        }
+    }
+}
+
+.local-schedule {
+    padding: 24px 0;
+    border-bottom: 1px solid $border-color;
+
+    @media screen and (min-width: $medium) {
+        padding: 32px 0;
+    }
+}
+
+.local__text {
+    font-family: $dm-sans;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: $secondary-text-color;
+
+    @media screen and (min-width: $medium) {
+        font-size: 14px;
+        line-height: 1.66;
+    }
+
+    @media screen and (min-width: $large) {
+        font-size: 16px;
+        line-height: 1.83;
+    }
+
+    &--black {
+        color: $maint-text-color-dark;
+        line-height: 1.86;
+    }
+
+    &--pink {
+        color: $secondary-accent-color-pink;
+        line-height: 1.86;
+    }
+}
+
+.local-contacts {
+    padding-top: 24px;
+
+    @media screen and (min-width: $large) {
+        padding-top: 32px;
+    }
+}
+
+.local-contacts__link {
+    display: block;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+
+    &:hover,
+    &:focus {
+        color: $secondary-accent-color-pink;
+    }
+}
+
+.local-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+
+    @media screen and (min-width: $large) {
+        flex-wrap: nowrap;
+        gap: 15px;
+        padding-top: 60px;
+    }
+}

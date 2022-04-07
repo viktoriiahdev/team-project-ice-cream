@@ -1,32 +1,46 @@
-.page-header{
- /* min-height: 94px;*/
-  width: 320px;
+//@media screen and (min-width: $medium)
+//@media screen and (min-width: $large)
+.page-header {
+  /* min-height: 94px;*/
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
-
-  outline: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
-.header__container{
-  position: relative;
+.header__container {
   display: flex;
   flex-wrap: wrap;
   padding-top: 8px;
+  padding-top: 8px;
   justify-content: space-between;
-  width: 320px;
   align-items: center;
+
+  @media screen and (min-width: $medium) {
+    justify-content: flex-end;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  @media screen and (min-width: $large) {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
-.modal__close{
+.modal__close {
   width: 14px;
   height: 14px;
   fill: currentColor;
 }
-.logo__svg{
+.logo__svg {
   width: 50px;
   height: 50px;
   margin-right: 15px;
-
 }
-.logo{
+.logo {
   display: flex;
   align-items: center;
 
@@ -35,53 +49,160 @@
   line-height: calc(39 / 24);
   letter-spacing: 0.04em;
   color: $main-accent-color;
+
+  @media screen and (min-width: $medium) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: $large) {
+    margin-right: 0;
+  }
 }
-.header__nav{
+.header__nav {
   width: 250px;
   height: 502px;
-  padding: 20px;
+  padding-top: 20px;
   position: absolute;
   top: 0;
-  left: 320px;
-  transition: transform 250ms linear;
-  
+  right: 0;
+
   color: $maint-text-color-light;
   background: $modal-bg-color;
-}
-.modal__close{
-  position: absolute;
-  right: 20px;
-  top: 20px;
+  transform: translateX(0);
+  transition: transform 250ms $cubic;
 
-  fill: $main-bg-color;
-}
-
-.header__menu-btn{
-  width: 12px;
-  height: 20px;
-  background-color: transparent;
-
-  &:hover ~.header__nav, &:focus ~.header__nav{  //висит на ховере
-    transform: translateX(-250px);
+  @media screen and (min-width: $medium) {
+    height: 100vh;
+    width: 254px;
+  }
+  @media screen and (min-width: $large) {
+    visibility: visible;
+    display: flex;
+    position: static;
+    height: auto;
+    background: inherit;
+    padding: 0;
+    width: auto;
   }
 }
-.header__menu-svg{
-  fill: $main-accent-color;
-  height: 20px;
-  width: 12px;
+.header__mb-btn {
+  position: absolute;
+  background: transparent;
+  right: 20px;
+  top: 32px;
+  color: currentColor;
 }
-.header__btn-mb{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 26px;
-  margin-bottom: 32px;
-}
-.header__nav-link{
-  color: $main-bg-color;
-  &:hover, &:focus{
+.header__mb-btn {
+  &:hover,
+  &:focus {
     color: $main-accent-color;
   }
+  @media screen and (min-width: $large) {
+    display: none;
+  }
 }
-.header__nav-item:not(:last-child){
-  margin-bottom: 22px;
+.header__menu-svg {
+  fill: $main-accent-color;
+  height: 100%;
+  width: 100%;
+}
+
+.header__menu-btn {
+  width: 20px;
+  height: 12px;
+  background-color: transparent;
+
+  @media screen and (min-width: $medium) {
+    margin-right: 24px;
+  }
+  @media screen and (min-width: $large) {
+    display: none;
+  }
+}
+
+.header__btn-mb {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 32px;
+  @media screen and (min-width: $large) {
+    display: none;
+  }
+}
+.header__nav-list {
+  @media screen and (min-width: $large) {
+    display: flex;
+    width: 100%;
+  }
+}
+.header__nav-link {
+  color: $main-bg-color;
+  padding-left: 20px;
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+  }
+  @media screen and (min-width: $large) {
+    padding: 0;
+  }
+}
+.header__nav-item {
+  border: 1px solid #e18298;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  width: 100%;
+  @media screen and (min-width: $large) {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    width: auto;
+  }
+}
+.header__nav-item:not(:last-child) {
+  @media screen and (min-width: $large) {
+    margin-right: 35px;
+  }
+}
+
+.header__btn-mb2 {
+  display: none;
+  @media screen and (min-width: $medium) {
+    display: flex;
+  }
+}
+.over {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  opacity: 1;
+  transition: opacity 250ms $cubic, visibility 250ms $cubic;
+
+  @media screen and (min-width: $large) {
+    display: block;
+  }
+}
+
+.over.is-hidden0 {
+  opacity: 0;
+  visibility: hidden;
+  margin-right: 0;
+  .header__nav {
+    transform: translateX(100%);
+  }
+  @media screen and (min-width: $large) {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    width: auto;
+    .header__nav {
+      transform: none;
+    }
+  }
 }

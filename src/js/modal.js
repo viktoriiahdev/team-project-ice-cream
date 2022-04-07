@@ -17,6 +17,9 @@ function openModal() {
 //закривать при кліку в будь-якому місці навколо модального вікна
 function closeModal() {
   backdrop.classList.add(backdropHiddenClass);
+  if (!modal.classList.contains('modal--hidden')) {
+    modalImg.removeAttribute('src');
+  }
   modal.classList.add(modalHiddenClass);
 }
 
@@ -34,7 +37,6 @@ backdrop.addEventListener('click', closeModal);
 modalContent.forEach(el => {
   if (!el.classList.contains('modal--gallery'))
     el.onclick = function (event) {
-      console.log(this);
       event.stopPropagation();
     };
 });
@@ -49,8 +51,8 @@ images.forEach(img => {
 
 // відкривать зображення в модальному вікні
 function openImage() {
+  modalImg.src = this.src;
   modal = document.querySelector('[data-modal-' + this.dataset.content + ']');
   modal.classList.remove(modalHiddenClass);
   backdrop.classList.remove(backdropHiddenClass);
-  modalImg.src = this.src;
 }

@@ -5,8 +5,15 @@
     background-size: auto 90%;
     background-repeat: no-repeat;
     background-position: bottom right -80px;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("/images/ice-cream_320@2x.png");
+    }
     @media screen and (min-width:768px) {
         background-image: none;
+
+        
     }
     @media screen and (min-width:1200px) {
         
@@ -26,6 +33,11 @@
         padding-bottom: 190px;
         background-image: url("/images/ice-cream_768.png");
         background-position: bottom right 185px;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("/images/ice-cream_768@2x.png");
+        }
     }
     @media screen and (min-width:1200px) {
         background-image: url("/images/ice-cream_1200.png");
@@ -34,7 +46,11 @@
         padding-bottom: 84px;
         padding-top: 147px;
         padding-bottom: 316px;
-        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("/images/ice-cream_1200@2x.png");
+        }
     }
   
 }
@@ -42,23 +58,23 @@
     position: relative;
     z-index: 2;
     margin-bottom: 20px;
-    font-family: 'Titan One';
+    font-family: $titan-one;
     font-weight: 400;
     text-transform: uppercase;
     
-    color: #FFFFFF;
+    color: $main-bg-color;
    
-    font-size: 26px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
+   font-size: 26px;
+line-height: 1.15;
+letter-spacing: 0.04em;
     @media screen and (min-width:768px) {
         font-size: 22px;
-        line-height: 25px;
+        line-height: 1.13;
         letter-spacing: 0.04em;
     }
     @media screen and (min-width:1200px) {
     font-size: 38px;
-    line-height: 44px;
+    line-height: 1.15;
     }
 }
 .hero-btn-list {
@@ -83,6 +99,7 @@
         display: block;
     }
 }
+
 .cafe-list {
   
     @media screen and (max-width:767px){
@@ -90,9 +107,9 @@
     }
 }
 .hero__text {
-    font-family: 'DM Sans';
+    font-family: $dm-sans;
    font-size: 8px;
-    color: #FFFFFF;
+    color: $main-bg-color;
     margin-bottom: 7px;
     @media screen and (min-width:1200px) {
         font-size: 14px;
@@ -123,20 +140,21 @@
     flex-direction: column;
 }
 .cafe-list__item {
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 .cafe-list__text {
    
-    font-family: 'Titan One';
+    font-family:$titan-one;
 font-size: 28px;
-line-height: 32px;
-text-align: right;
+line-height: 1.14;
+
     text-align: right;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #D41443;
+    color: $main-accent-color;
     z-index: 5;
     @media screen  and (min-width:1200px) {
         
@@ -145,10 +163,10 @@ text-align: right;
     }
 }
 .cafe-list__description {
-        color: #FFFFFF;
+        color: $main-bg-color;
         font-family: 'DM Sans';
         font-size: 8px;
-        line-height: 10px;
+        line-height: 1.25;
         text-align: right;
     @media screen and (min-width:1200px) {
     font-size: 14px;
@@ -249,14 +267,7 @@ width: 304px;
     border-radius: 50%;
     z-index: 4;
 }
-.hero-btn-list__link:hover {
-    .hero__btn {
-        background-color: #D41443;
-        color: #FFFFFF;
-  
-    }
 
-}
 @keyframes Appearance {
     0% {
         opacity: 0;

@@ -8,8 +8,9 @@ const modalContent = document.querySelectorAll('.modal');
 const openModalBtn = document.querySelectorAll('[data-modal-open]');
 const closeModalBtn = document.querySelectorAll('[data-modal-close]');
 
+let modal;
+
 function openModal() {
-  console.log(this);
   modal = document.querySelector('[data-modal-' + this.dataset.content + ']');
   modal.classList.remove(modalHiddenClass);
   backdrop.classList.remove(backdropHiddenClass);

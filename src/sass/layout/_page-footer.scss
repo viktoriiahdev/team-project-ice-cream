@@ -23,6 +23,7 @@
         gap: 12px;
         width: auto;
         flex-direction: column;
+        margin-bottom: 0;
     }
 }
 
@@ -36,11 +37,13 @@
     color: $secondary-accent-color-pink;
     text-align: start;
     width: 232px;
+
     @media screen and (min-width: 768px) {
         font-size: 26px;
         line-height: 1.15;
         width: 340px;
     }
+
     @media screen and (min-width: 1200px) {
         font-size: 30px;
         line-height: 1.13;
@@ -55,11 +58,13 @@
     letter-spacing: 0.04em;
     color: $main-accent-color;
     width: 200px;
+
     @media screen and (min-width: 768px) {
         font-size: 48px;
         line-height: 1.14;
         width: 340px;
     }
+
     @media screen and (min-width: 1200px) {
         font-size: 58px;
         line-height: 1.13;
@@ -88,6 +93,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     color: #FEA5BB;
+    transition: color 250ms $cubic;
 
     &:hover,
     &:focus {
@@ -108,10 +114,12 @@
     line-height: 1.83;
     text-align: right;
     color: $maint-text-color-dark;
+
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.85;
     }
+
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 1.87;
@@ -126,10 +134,17 @@
     line-height: 1.83;
     text-align: right;
     color: $main-accent-color;
+
+    &:hover,
+    &:focus {
+        color: $main-accent-color-darker;
+    }
+
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.85;
     }
+
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 1.87;
@@ -160,6 +175,7 @@
     margin-right: auto;
     max-width: 280px;
     display: block;
+
     @media screen and (min-width: 768px) {
         display: inline;
     }

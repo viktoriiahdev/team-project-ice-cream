@@ -1,5 +1,13 @@
 .hero {
     background: #FFB8CA;
+    background-image: url("/images/ice-cream_320.png");
+    
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: bottom right -80px;
+    @media screen and (min-width:768px) {
+        background-image: none;
+    }
     @media screen and (min-width:1200px) {
         
     }
@@ -7,15 +15,11 @@
    
 }
 .hero__container {
-    overflow: visible;
+    
     position: relative;
     padding-top: 194px;
     padding-bottom: 190px;
-    background-image: url("/images/ice-cream_320.png");
-    
-        background-size: auto 90%;
-        background-repeat: no-repeat;
-        background-position: bottom right -80px;
+    background-repeat: no-repeat;
     @media screen and (min-width:768px) {
         padding-top: 102px;
        
@@ -250,7 +254,15 @@ width: 304px;
         background-color: #D41443;
         color: #FFFFFF;
   
-       transition: color background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+}
+@keyframes Appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
